@@ -24,6 +24,10 @@ body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
 .news-title { font-weight: 600; }
 .news-desc { font-size: 14px; color: #666; display: block; margin: 2px 0 0 0; }
 .news-source { font-size: 12px; color: #1a237e; }
+.news-link { text-decoration: none; color: inherit; display: inline; }
+.news-link:hover .news-title { color: #1a237e; text-decoration: underline; }
+.back-btn { display: inline-block; background: rgba(255,255,255,0.2); color: white; text-decoration: none; padding: 6px 16px; border-radius: 20px; font-size: 13px; margin-bottom: 12px; transition: background 0.2s; }
+.back-btn:hover { background: rgba(255,255,255,0.35); }
 .golden-saying { background: linear-gradient(135deg, #fff8e1, #ffecb3); border-radius: 12px; padding: 20px; text-align: center; }
 .golden-saying .en { font-size: 20px; font-weight: 600; color: #5a4a2a; line-height: 1.6; font-style: italic; }
 .golden-saying .cn { font-size: 15px; color: #8a7a5a; margin-top: 8px; }
@@ -60,6 +64,7 @@ body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
 <body>
 <div class="container">
   <div class="header">
+    <a href="/" class="back-btn">← 返回首页</a>
     <h1>🌤 Hermes 气象晨报</h1>
     <div class="sub">青海 · 西宁</div>
     <div class="date">2026年6月9日 周二</div>
@@ -74,28 +79,28 @@ body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
   </div>
 </div></div>
   <div class="section"><h2>📰 国内要闻 <span style="font-size:12px;background:#eef;color:#666;padding:2px 10px;border-radius:20px;font-weight:normal;">10条</span></h2><ul class="news-list">
-  <li><span class="news-title">习近平抵达平壤开始对朝鲜进行国事访问</span><span class="news-desc">出席金正恩举行的盛大欢迎仪式，在朝鲜媒体发表署名文章</span><span class="news-source"> [中国新闻网]</span></li>
-  <li><span class="news-title">教育部部署2026届高校毕业生就业"百日冲刺"行动</span><span class="news-desc">多措并举促进高校毕业生就业创业</span><span class="news-source"> [中国新闻网]</span></li>
-  <li><span class="news-title">住建部："十五五"时期将继续建设改造城市地下管网约77万公里</span><span class="news-desc">持续推进城市更新和基础设施升级</span><span class="news-source"> [中国新闻网]</span></li>
-  <li><span class="news-title">国家防总针对福建、广东、云南启动防汛四级应急响应</span><span class="news-desc">贵州多地特大暴雨已紧急转移上万人</span><span class="news-source"> [中国新闻网]</span></li>
-  <li><span class="news-title">国务院国资委原副部长级干部潘良被开除党籍</span><span class="news-desc">新疆自治区原副主席陈伟俊同时被"双开"</span><span class="news-source"> [中国新闻网]</span></li>
-  <li><span class="news-title">两部门联合印发《网络测评活动规范》</span><span class="news-desc">市场监管总局约谈美宜佳总部</span><span class="news-source"> [中国新闻网]</span></li>
-  <li><span class="news-title">自然资源部：2025年中国海洋生态状况总体保持稳定</span><span class="news-desc">我国已批准注册特医食品330个</span><span class="news-source"> [中国新闻网]</span></li>
-  <li><span class="news-title">2026法网：兹维列夫首夺大满贯男单冠军</span><span class="news-desc">19岁俄罗斯选手安德列娃夺得女单冠军</span><span class="news-source"> [中国新闻网]</span></li>
-  <li><span class="news-title">世界女排联赛中国南京站：中国队战胜波兰队</span><span class="news-desc">女排姑娘继续保持良好状态</span><span class="news-source"> [中国新闻网]</span></li>
-  <li><span class="news-title">四川康定4.5级地震 暂无人员伤亡报告</span><span class="news-desc">当地生产生活秩序正常</span><span class="news-source"> [中国新闻网]</span></li>
+  <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-08/10636234.shtml" target="_blank"><span class="news-title">习近平抵达平壤开始对朝鲜进行国事访问</span></a><span class="news-desc">出席金正恩举行的盛大欢迎仪式，在朝鲜媒体发表署名文章</span><span class="news-source"> 中国新闻网</span></li>
+  <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-08/10636214.shtml" target="_blank"><span class="news-title">习近平出席金正恩举行的欢迎仪式</span></a><span class="news-desc">朝方举行盛大欢迎仪式，朝鲜民众热烈欢迎</span><span class="news-source"> 中国新闻网</span></li>
+  <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-08/10636272.shtml" target="_blank"><span class="news-title">习言道｜续写中朝传统友谊崭新篇章</span></a><span class="news-desc">习近平在朝鲜媒体发表署名文章</span><span class="news-source"> 中国新闻网</span></li>
+  <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-08/10636117.shtml" target="_blank"><span class="news-title">教育部部署2026届高校毕业生就业"百日冲刺"行动</span></a><span class="news-desc">多措并举促进高校毕业生就业创业</span><span class="news-source"> 中国新闻网</span></li>
+  <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-08/10636102.shtml" target="_blank"><span class="news-title">住建部："十五五"时期将继续建设改造城市地下管网约77万公里</span></a><span class="news-desc">持续推进城市更新和基础设施升级</span><span class="news-source"> 中国新闻网</span></li>
+  <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-08/10636122.shtml" target="_blank"><span class="news-title">国家防总针对福建、广东、云南启动防汛四级应急响应</span></a><span class="news-desc">贵州多地特大暴雨已紧急转移上万人</span><span class="news-source"> 中国新闻网</span></li>
+  <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-08/10636231.shtml" target="_blank"><span class="news-title">国务院国资委原副部长级干部潘良被开除党籍</span></a><span class="news-desc">新疆自治区原副主席陈伟俊同时被"双开"</span><span class="news-source"> 中国新闻网</span></li>
+  <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-08/10636067.shtml" target="_blank"><span class="news-title">两部门联合印发《网络测评活动规范》</span></a><span class="news-desc">市场监管总局约谈美宜佳总部</span><span class="news-source"> 中国新闻网</span></li>
+  <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-08/10636189.shtml" target="_blank"><span class="news-title">自然资源部：2025年中国海洋生态状况总体保持稳定</span></a><span class="news-desc">我国已批准注册特医食品330个</span><span class="news-source"> 中国新闻网</span></li>
+  <li><a class="news-link" href="https://www.chinanews.com.cn/ty/2026/06-08/10636105.shtml" target="_blank"><span class="news-title">2026法网：兹维列夫首夺大满贯男单冠军</span></a><span class="news-desc">19岁俄罗斯选手安德列娃夺得女单冠军</span><span class="news-source"> 中国新闻网</span></li>
 </ul></div>
   <div class="section"><h2>🌏 国际要闻 <span style="font-size:12px;background:#eef;color:#666;padding:2px 10px;border-radius:20px;font-weight:normal;">10条</span></h2><ul class="news-list">
-  <li><span class="news-title">伊朗向以色列发射弹道导弹</span><span class="news-desc">伊朗革命卫队确认，以色列随后打击伊朗军事目标，中东局势骤然升级</span><span class="news-source"> [中国新闻网]</span></li>
-  <li><span class="news-title">菲律宾棉兰老岛近海发生7.8级地震</span><span class="news-desc">遇难人数已增至15人，专家解析成因</span><span class="news-source"> [中国新闻网]</span></li>
-  <li><span class="news-title">捷克政客执意再次窜台</span><span class="news-desc">被揭露为反华利益链上的"角色扮演"</span><span class="news-source"> [中国新闻网]</span></li>
-  <li><span class="news-title">美国纽约最繁忙车站发生持刀伤人事件</span><span class="news-desc">共6人受伤</span><span class="news-source"> [中国新闻网]</span></li>
-  <li><span class="news-title">多米尼加私人飞机坠毁爆炸</span><span class="news-desc">造成两名美国公民遇难</span><span class="news-source"> [中国新闻网]</span></li>
-  <li><span class="news-title">尼日利亚军方成功解救360名被绑架民众</span><span class="news-desc">大规模解救行动取得成功</span><span class="news-source"> [中国新闻网]</span></li>
-  <li><span class="news-title">欧盟官员呼吁伊朗和以色列保持克制</span><span class="news-desc">避免局势进一步升级</span><span class="news-source"> [中国新闻网]</span></li>
-  <li><span class="news-title">中国驻伊朗、以色列大使馆发布安全提醒</span><span class="news-desc">提醒在伊以中国公民注意安全</span><span class="news-source"> [中国新闻网]</span></li>
-  <li><span class="news-title">苏丹两地遭无人机袭击致67人死亡</span><span class="news-desc">安全局势持续恶化</span><span class="news-source"> [中国新闻网]</span></li>
-  <li><span class="news-title">伊拉克发生严重车祸致21死19伤</span><span class="news-desc">交通事故原因正在调查</span><span class="news-source"> [中国新闻网]</span></li>
+  <li><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-08/10636195.shtml" target="_blank"><span class="news-title">伊朗向以色列发射弹道导弹</span></a><span class="news-desc">伊朗革命卫队确认，以色列随后打击伊朗军事目标，中东局势骤然升级</span><span class="news-source"> 中国新闻网</span></li>
+  <li><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-08/10636150.shtml" target="_blank"><span class="news-title">菲律宾棉兰老岛近海发生7.8级地震</span></a><span class="news-desc">遇难人数已增至15人，专家解析成因</span><span class="news-source"> 中国新闻网</span></li>
+  <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-08/10636167.shtml" target="_blank"><span class="news-title">捷克政客执意再次窜台</span></a><span class="news-desc">被揭露为反华利益链上的"角色扮演"</span><span class="news-source"> 中国新闻网</span></li>
+  <li><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-08/10636127.shtml" target="_blank"><span class="news-title">美国纽约最繁忙车站发生持刀伤人事件</span></a><span class="news-desc">共6人受伤</span><span class="news-source"> 中国新闻网</span></li>
+  <li><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-08/10636143.shtml" target="_blank"><span class="news-title">多米尼加私人飞机坠毁爆炸</span></a><span class="news-desc">造成两名美国公民遇难</span><span class="news-source"> 中国新闻网</span></li>
+  <li><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-08/10636155.shtml" target="_blank"><span class="news-title">尼日利亚军方成功解救360名被绑架民众</span></a><span class="news-desc">大规模解救行动取得成功</span><span class="news-source"> 中国新闻网</span></li>
+  <li><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-08/10636161.shtml" target="_blank"><span class="news-title">欧盟官员呼吁伊朗和以色列保持克制</span></a><span class="news-desc">避免局势进一步升级</span><span class="news-source"> 中国新闻网</span></li>
+  <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-08/10636205.shtml" target="_blank"><span class="news-title">中国驻伊朗、以色列大使馆发布安全提醒</span></a><span class="news-desc">提醒在伊以中国公民注意安全</span><span class="news-source"> 中国新闻网</span></li>
+  <li><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-08/10636110.shtml" target="_blank"><span class="news-title">苏丹两地遭无人机袭击致67人死亡</span></a><span class="news-desc">安全局势持续恶化</span><span class="news-source"> 中国新闻网</span></li>
+  <li><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-08/10636135.shtml" target="_blank"><span class="news-title">伊拉克发生严重车祸致21死19伤</span></a><span class="news-desc">交通事故原因正在调查</span><span class="news-source"> 中国新闻网</span></li>
 </ul></div>
   <div class="section"><h2>📝 英文金句</h2><div class="golden-saying">
   <div class="en">"The only way to do great work is to love what you do."</div>
