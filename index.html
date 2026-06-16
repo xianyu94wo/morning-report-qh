@@ -93,6 +93,8 @@
         .tag-dom { background: #1b5e20; color: #a5d6a7; }
         .tag-intl { background: #4a148c; color: #ce93d8; }
         .tag-fin { background: #e65100; color: #ffcc80; }
+        .tag-qh { background: #01579b; color: #81d4fa; }
+        .tag-sci { background: #004d40; color: #80cbc4; }
         .news-link {
             color: #90caf9;
             text-decoration: none;
@@ -115,6 +117,33 @@
         .quote-box .en { font-size: 18px; font-style: italic; color: #b0bec5; }
         .quote-box .cn { font-size: 15px; color: rgba(255,255,255,0.7); margin-top: 8px; }
         .quote-box .author { text-align: right; color: #7986cb; font-size: 13px; margin-top: 8px; }
+        .fun-box {
+            background: rgba(26,35,126,0.1);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .fun-box .fact {
+            font-size: 15px;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.9;
+        }
+        .fun-box .fact strong {
+            color: #ffd54f;
+        }
+        .fun-box .highlight {
+            background: linear-gradient(135deg, rgba(255,213,79,0.1), rgba(255,193,7,0.05));
+            border-left: 4px solid #ffd54f;
+            border-radius: 6px;
+            padding: 14px 18px;
+            margin: 10px 0;
+        }
+        .fun-box .source {
+            display: block;
+            text-align: right;
+            color: rgba(255,255,255,0.3);
+            font-size: 12px;
+            margin-top: 12px;
+        }
         .idiom-box {
             background: rgba(26,35,126,0.1);
             border-radius: 10px;
@@ -175,9 +204,8 @@
             font-weight: 700;
             color: #5c6bc0;
             margin: 16px 0 8px;
-            padding-left: 4px;
-            border-left: 3px solid #5c6bc0;
             padding-left: 10px;
+            border-left: 3px solid #5c6bc0;
         }
         .footer {
             text-align: center;
@@ -198,7 +226,6 @@
             .weather-card { grid-template-columns: 1fr; }
             .chart-grid { grid-template-columns: 1fr; }
             .balance-card { flex-direction: column; }
-            .header h1 { font-size: 22px; }
         }
     </style>
 </head>
@@ -208,146 +235,139 @@
     <!-- Header -->
     <div class="header">
         <a href="/" class="back-btn">← 返回首页</a>
-        <h1>☀️ Hermes 气象晨报</h1>
+        <h1>🌤️ Hermes 气象晨报</h1>
         <div class="date">2026年6月17日 · 星期三</div>
-        <div class="sub">GFS 20260616 18Z · ECMWF · 实时新闻</div>
-    </div>
-
-    <!-- ⚠️ Weather Alert -->
-    <div class="warning">
-        ⚠️ 青海海西州直辖区今日凌晨发生6.3级地震（震源深度10千米），请关注官方后续信息。
+        <div class="sub">数据来源：GFS 0.25° · ECMWF HRES · 中国天气网</div>
     </div>
 
     <!-- Section 1: Daily Weather -->
     <div class="section">
-        <div class="section-title">📅 每日天气 · 青海西宁</div>
+        <div class="section-title">📅 每日天气 · 西宁/青海</div>
         <div class="weather-card">
             <div class="weather-item">
-                <h3>🏙️ 西宁市区</h3>
-                <div class="temp">19°C / 9°C</div>
-                <div class="desc">☁️ 多云转阴，午后可能有阵雨<br>💨 微风 2-3级<br>💧 湿度 45%-75%</div>
+                <h3>🌡️ 今日气温</h3>
+                <div class="temp">26°C / 12°C</div>
+                <div class="desc">小雨转阴 · 微风 &lt;3级</div>
             </div>
             <div class="weather-item">
-                <h3>🌄 青海全省</h3>
-                <div class="desc">
-                    • 海西州：⚠️ 震区多云，6-17°C<br>
-                    • 青海湖：多云，8-16°C<br>
-                    • 格尔木：晴间多云，11-22°C<br>
-                    • 玉树：阴有小雨，5-14°C<br>
-                    • 祁连山区：阵雨，3-12°C
+                <h3>📊 天气概况</h3>
+                <div class="desc" style="margin-top:8px;">
+                    今天西宁小雨转阴，气温12~26°C。受高原槽东移影响，未来几天持续有分散性降水。<br><br>
+                    明后两天（18-19日）小雨转多云，气温11~25°C。<br><br>
+                    🌧️ 青海省24h降水预报：GFS显示柴达木盆地东部及祁连山区有分散性降水，中心位于102.2°E、31.2°N附近，降水量约25.4mm。
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Section 2: Latest News -->
+    <!-- Section 2: News -->
     <div class="section">
         <div class="section-title">📰 最新要闻 · 2026年6月16日</div>
 
-        <h3 style="color:#7986cb;font-size:15px;margin-bottom:10px;">🇨🇳 国内新闻</h3>
+        <h3 style="color:#81c784;font-size:16px;margin:12px 0 8px;">🇨🇳 国内要闻</h3>
         <ul class="news-list">
             <li>
-                <span class="tag tag-dom">要闻</span>
+                <span class="tag tag-dom">时政</span>
                 <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-16/10641304.shtml" target="_blank">习近平同缅甸总统敏昂莱共同出席合作文件签字仪式</a>
                 <span class="news-source">中新网</span>
             </li>
             <li>
-                <span class="tag tag-dom">要闻</span>
-                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-16/10641331.shtml" target="_blank">习言道｜实现中华民族伟大复兴，人才越多越好，本事越大越好</a>
+                <span class="tag tag-dom">时政</span>
+                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-16/10641747.shtml" target="_blank">李强会见缅甸总统敏昂莱：深化共建"一带一路"合作</a>
                 <span class="news-source">中新网</span>
             </li>
             <li>
                 <span class="tag tag-dom">时政</span>
-                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-16/10641363.shtml" target="_blank">赵乐际主持召开全国人大常委会第六十八次委员长会议</a>
+                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-16/10641363.shtml" target="_blank">赵乐际主持召开全国人大常委会委员长会议</a>
                 <span class="news-source">中新网</span>
             </li>
             <li>
                 <span class="tag tag-dom">时政</span>
-                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-16/10641442.shtml" target="_blank">国防部：所谓"中国间谍威胁"是别有用心的捏造</a>
+                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-16/10641366.shtml" target="_blank">王沪宁会见尼泊尔外交部长希西尔</a>
                 <span class="news-source">中新网</span>
             </li>
             <li>
-                <span class="tag tag-dom">外交</span>
-                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-16/10641400.shtml" target="_blank">林剑回应霍尔木兹海峡状况：全力维护中资船舶和中国籍船员安全</a>
-                <span class="news-source">中新网</span>
-            </li>
-            <li>
-                <span class="tag tag-dom">财经</span>
+                <span class="tag tag-dom">经济</span>
                 <a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-16/10641199.shtml" target="_blank">国家统计局：5月份国民经济运行总体平稳、向新向优</a>
                 <span class="news-source">中新网</span>
             </li>
             <li>
-                <span class="tag tag-dom">财经</span>
+                <span class="tag tag-dom">科技</span>
                 <a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-16/10641435.shtml" target="_blank">各地抢抓布局太空算力，培育空天领域新质生产力</a>
                 <span class="news-source">中新网</span>
             </li>
             <li>
-                <span class="tag tag-dom">监管</span>
+                <span class="tag tag-dom">外交</span>
+                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-16/10641400.shtml" target="_blank">林剑回应霍尔木兹海峡最新状况：继续全力维护中资船舶安全</a>
+                <span class="news-source">中新网</span>
+            </li>
+            <li>
+                <span class="tag tag-dom">军事</span>
+                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-16/10641442.shtml" target="_blank">国防部：所谓"中国间谍威胁"是别有用心的捏造</a>
+                <span class="news-source">中新网</span>
+            </li>
+            <li>
+                <span class="tag tag-dom">法治</span>
                 <a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-16/10641558.shtml" target="_blank">市场监管总局：将针对无堂食外卖出台专项文件</a>
                 <span class="news-source">中新网</span>
             </li>
             <li>
-                <span class="tag tag-dom">社会</span>
-                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-16/10641747.shtml" target="_blank">中央纪委通报五起政绩观偏差典型案件</a>
-                <span class="news-source">中新网</span>
-            </li>
-            <li>
-                <span class="tag tag-dom">青海</span>
-                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-16/10641747.shtml" target="_blank">⚠️ 青海海西州直辖区发生6.3级地震，震源深度10千米</a>
+                <span class="tag tag-qh">青海</span>
+                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-16/10641442.shtml" target="_blank">青海海西州直辖区发生6.3级地震，震源深度10千米</a>
                 <span class="news-source">中新网</span>
             </li>
         </ul>
 
-        <h3 style="color:#7986cb;font-size:15px;margin:16px 0 10px;">🌍 国际新闻</h3>
+        <h3 style="color:#ce93d8;font-size:16px;margin:16px 0 8px;">🌏 国际要闻</h3>
         <ul class="news-list">
             <li>
                 <span class="tag tag-intl">美伊</span>
-                <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-16/10641572.shtml" target="_blank">特朗普称美伊协议谈判进入第二阶段</a>
+                <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-16/10641622.shtml" target="_blank">特朗普称美伊谈判进入第二阶段，19日将签谅解备忘录</a>
                 <span class="news-source">中新网</span>
             </li>
             <li>
-                <span class="tag tag-intl">美伊</span>
-                <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-16/10641092.shtml" target="_blank">万斯称美伊谅解备忘录已电子签署，19日将正式签署</a>
-                <span class="news-source">中新网</span>
-            </li>
-            <li>
-                <span class="tag tag-intl">美伊</span>
-                <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-16/10641157.shtml" target="_blank">特朗普否认美国向伊朗支付巨额资金</a>
+                <span class="tag tag-intl">军事</span>
+                <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-16/10641067.shtml" target="_blank">美军B-52战略轰炸机坠毁，机上8人恐无人生还</a>
                 <span class="news-source">中新网</span>
             </li>
             <li>
                 <span class="tag tag-intl">中东</span>
-                <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-16/10641075.shtml" target="_blank">内塔尼亚胡称不知道美伊协议具体条款</a>
+                <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-16/10641622.shtml" target="_blank">伊朗外长：美伊谈判分两阶段，60天内达成最终协议</a>
                 <span class="news-source">中新网</span>
             </li>
             <li>
-                <span class="tag tag-intl">军事</span>
-                <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-16/10641067.shtml" target="_blank">美军一架B-52战略轰炸机坠毁，机上8人恐无人生还</a>
-                <span class="news-source">中新网</span>
-            </li>
-            <li>
-                <span class="tag tag-intl">军事</span>
-                <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-16/10641067.shtml" target="_blank">国防部：日本加速"再军事化"正成为亚太"火药桶"</a>
+                <span class="tag tag-intl">亚太</span>
+                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-16/10641442.shtml" target="_blank">国防部：日本加速"再军事化"正成为亚太"火药桶"</a>
                 <span class="news-source">中新网</span>
             </li>
             <li>
                 <span class="tag tag-intl">体育</span>
-                <a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-16/10641558.shtml" target="_blank">世界杯：佛得角爆冷逼平西班牙，40岁门将一战封神</a>
+                <a class="news-link" href="https://www.chinanews.com.cn/ty/2026/06-16/10641828.shtml" target="_blank">伊朗队"特种兵式"参赛世界杯，主教练称"最受压迫的球队"</a>
+                <span class="news-source">中新网</span>
+            </li>
+            <li>
+                <span class="tag tag-intl">体育</span>
+                <a class="news-link" href="https://www.chinanews.com.cn/ty/2026/06-16/10641828.shtml" target="_blank">世界杯：佛得角0-0爆冷逼平西班牙，40岁门将一战封神</a>
+                <span class="news-source">中新网</span>
+            </li>
+            <li>
+                <span class="tag tag-intl">灾害</span>
+                <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-16/10641067.shtml" target="_blank">印尼海域发生6.7级地震，或引发局地海啸</a>
+                <span class="news-source">中新网</span>
+            </li>
+            <li>
+                <span class="tag tag-intl">人道</span>
+                <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-16/10641067.shtml" target="_blank">海地帮派暴力今年已致至少2300人死亡</a>
+                <span class="news-source">中新网</span>
+            </li>
+            <li>
+                <span class="tag tag-intl">G7</span>
+                <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-16/10641622.shtml" target="_blank">G7峰会法国开幕，特朗普与马克龙再现"标志性握手"</a>
                 <span class="news-source">中新网</span>
             </li>
             <li>
                 <span class="tag tag-intl">南美</span>
                 <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-16/10641067.shtml" target="_blank">巴西两架直升机相撞致6死，美国歌手奥利弗·特里遇难</a>
-                <span class="news-source">中新网</span>
-            </li>
-            <li>
-                <span class="tag tag-intl">G7</span>
-                <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-16/10641622.shtml" target="_blank">七国集团峰会在法国开幕，马克龙与特朗普会谈</a>
-                <span class="news-source">中新网</span>
-            </li>
-            <li>
-                <span class="tag tag-intl">人道</span>
-                <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-16/10641622.shtml" target="_blank">海地帮派暴力今年已致至少2300人死亡</a>
                 <span class="news-source">中新网</span>
             </li>
         </ul>
@@ -357,41 +377,80 @@
     <div class="section">
         <div class="section-title">📝 英文金句</div>
         <div class="quote-box">
-            <div class="en">"The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle."</div>
-            <div class="cn">成就伟业的唯一途径是热爱你所做的事。如果你还没找到，继续寻找，不要将就。</div>
-            <div class="author">— Steve Jobs</div>
+            <div class="en">"The important thing is not to stop questioning. Curiosity has its own reason for existence. One cannot help but be in awe when contemplating the mysteries of eternity, of life, of the marvelous structure of reality."</div>
+            <div class="cn">重要的是不要停止追问。好奇心自有其存在的理由。当凝视永恒、生命以及现实奇妙结构的奥秘时，人不禁心生敬畏。</div>
+            <div class="author">— Albert Einstein</div>
         </div>
         <div style="margin-top:12px;color:rgba(255,255,255,0.4);font-size:13px;">
-            💡 无论面对何种挑战，保持热爱与坚持，终将收获属于自己的精彩。
+            💡 今天是"世界防治荒漠化和干旱日"，保护地球生态需要我们每个人的好奇心与行动。
         </div>
     </div>
 
-    <!-- Section 4: Chinese Idiom -->
+    <!-- Section 4: Random - 冷知识一则 (6月17日特别版) -->
+    <div class="section">
+        <div class="section-title">🤔 冷知识一则 · 6月17日的那些事</div>
+        <div class="fun-box">
+            <div class="fact">
+                <div class="highlight">
+                    <strong>💥 中国第一颗氢弹爆炸成功（1967年）</strong><br>
+                    1967年6月17日上午8时20分，中国第一颗氢弹在新疆罗布泊上空空爆成功！从第一颗原子弹（1964年10月16日）到第一颗氢弹，中国仅用了<strong>2年8个月</strong>，速度之快震惊世界。美国用了7年3个月，苏联用了6年3个月，英国用了4年7个月，法国用了8年6个月。
+                </div>
+
+                <div style="margin-top:14px;">
+                    <strong>🚀 神舟十二号发射（2021年）</strong><br>
+                    2021年6月17日9时22分，神舟十二号载人飞船在酒泉卫星发射中心升空，将聂海胜、刘伯明、汤洪波三名航天员送入太空，开启了中国人自己的空间站时代。
+                </div>
+
+                <div style="margin-top:14px;">
+                    <strong>🇨🇳 福建舰下水（2022年）</strong><br>
+                    2022年6月17日上午，我国第三艘航空母舰"中国人民解放军海军福建舰"（舷号"18"）在江南造船厂下水。这是我国完全自主设计建造的首艘弹射型航母。
+                </div>
+
+                <div style="margin-top:14px;">
+                    <strong>🌍 世界防治荒漠化和干旱日</strong><br>
+                    联合国大会于1994年决定，从1995年起每年6月17日为"世界防治荒漠化和干旱日"。全球荒漠化面积已达3600万平方公里，占地球陆地面积的四分之一。
+                </div>
+
+                <div style="margin-top:14px;">
+                    <strong>📚 亚当·斯密诞辰（1723年）</strong><br>
+                    1723年6月17日，苏格兰经济学家、哲学家亚当·斯密出生。他的著作《国富论》奠定了现代经济学的基础，被称为"现代经济学之父"。
+                </div>
+
+                <div style="margin-top:14px;">
+                    <strong>📰 《大公报》创刊（1902年）</strong><br>
+                    1902年6月17日，《大公报》在天津创刊，英华任社长。它是中国近代史上最具影响力的报纸之一，至今仍在香港出版。
+                </div>
+            </div>
+            <span class="source">来源：百度百科 · 中国新闻网</span>
+        </div>
+    </div>
+
+    <!-- Section 5: Chinese Idiom -->
     <div class="section">
         <div class="section-title">📚 成语典故</div>
         <div class="idiom-box">
-            <div class="idiom">百折不挠</div>
-            <div class="pinyin">bǎi zhé bù náo</div>
+            <div class="idiom">水滴石穿</div>
+            <div class="pinyin">shuǐ dī shí chuān</div>
             <div class="meaning">
-                <strong>释义：</strong>无论遭受多少次挫折都不退缩，形容意志坚强。<br><br>
-                <strong>出处：</strong>汉·蔡邕《太尉乔玄碑》："其性庄，疾华尚朴，有百折不挠，临大节而不可夺之风。"<br><br>
-                <strong>典故：</strong>东汉太尉乔玄为官刚正不阿，不畏权贵。一次，三个强盗绑架了他十岁的儿子，勒索赎金。乔玄不为所动，与强盗周旋，最终强盗被擒，但他的儿子不幸遇害。乔玄虽痛失爱子，却坚守原则，不向恶势力屈服。汉灵帝追念其功德，下令为其立碑。蔡邕在碑文中盛赞乔玄"有百折不挠"的品格。<br><br>
-                <strong>例句：</strong>科研攻关需要百折不挠的精神，才能在无数次失败后迎来成功的曙光。
+                <strong>释义：</strong>水滴不断地滴，可以滴穿石头。比喻坚持不懈，力量虽小也能成就艰难的事业。<br><br>
+                <strong>出处：</strong>宋·罗大经《鹤林玉露·一钱斩吏》："乖崖援笔判曰：'一日一钱，千日一千；绳锯木断，水滴石穿。'"<br><br>
+                <strong>典故：</strong>宋代崇阳县令张乖崖（张咏）见一个管仓库的小吏从库中偷了一文钱，便下令杖责。小吏不服："一文钱算什么？你也只能打我，总不能杀我吧！"张乖崖提笔写下判词："一日一钱，千日一千；绳锯木断，水滴石穿。"下令将其斩首。后人用此成语说明微小力量持续积累可产生巨大影响——无论是恶习的积累还是善行的坚持。<br><br>
+                <strong>例句：</strong>学习外语需要水滴石穿的功夫，每天坚持背诵，终能攻克语言难关。
             </div>
         </div>
     </div>
 
-    <!-- Section 5: DeepSeek Balance -->
+    <!-- Section 6: DeepSeek Balance -->
     <div class="section">
         <div class="section-title">💰 DeepSeek API 余额</div>
         <div class="balance-card">
             <div class="balance-item">
                 <div class="label">可用余额</div>
-                <div class="value">¥16.93</div>
+                <div class="value">¥16.56</div>
             </div>
             <div class="balance-item">
                 <div class="label">充值金额</div>
-                <div class="value">¥16.93</div>
+                <div class="value">¥16.56</div>
             </div>
             <div class="balance-item">
                 <div class="label">赠送金额</div>
@@ -407,7 +466,7 @@
         </div>
     </div>
 
-    <!-- Section 6: GFS + ECMWF Charts -->
+    <!-- Section 7: GFS + ECMWF Charts -->
     <div class="section">
         <div class="section-title">🌤️ GFS 500hPa 高空形势图</div>
         <div style="color:rgba(255,255,255,0.4);font-size:13px;margin-bottom:12px;">
@@ -434,54 +493,52 @@
                 <img src="images/gfs_500hpa_f024.jpg" alt="GFS 500hPa 24h预报" loading="lazy">
                 <div class="label">500hPa 24h预报 (F024)</div>
             </div>
-        </div>
-
-        <div class="chart-group-title">🌧️ 青海省降水预报</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px;">
             <div class="chart-card">
-                <img src="images/gfs_qinghai_precip_24h.jpg" alt="GFS 青海省24h累计降水" loading="lazy">
-                <div class="label">GFS 青海省24h累计降水</div>
-            </div>
-            <div class="chart-card">
-                <img src="images/ecmwf_qinghai_precip_24h.jpg" alt="ECMWF 青海省24h累计降水" loading="lazy">
-                <div class="label">ECMWF 青海省24h累计降水</div>
+                <img src="images/gfs_qinghai_precip_24h.jpg" alt="青海24h降水" loading="lazy">
+                <div class="label">🌧 青海省24h累计降水</div>
             </div>
         </div>
 
-        <div class="chart-group-title">🌍 ECMWF 500hPa 高空形势图</div>
+        <div class="chart-group-title">🛰️ ECMWF 500hPa 高空形势图</div>
+        <div style="color:rgba(255,255,255,0.4);font-size:13px;margin-bottom:12px;">
+            ECMWF HRES · 高分辨率全球模式
+        </div>
         <div class="chart-grid">
             <div class="chart-card">
                 <img src="images/ecmwf_500hpa_f000.jpg" alt="ECMWF 500hPa 分析场" loading="lazy">
-                <div class="label">ECMWF 500hPa 分析场 (F000)</div>
+                <div class="label">500hPa 分析场 (F000)</div>
             </div>
             <div class="chart-card">
                 <img src="images/ecmwf_500hpa_f006.jpg" alt="ECMWF 500hPa 6h预报" loading="lazy">
-                <div class="label">ECMWF 500hPa 6h预报 (F006)</div>
+                <div class="label">500hPa 6h预报 (F006)</div>
             </div>
             <div class="chart-card">
                 <img src="images/ecmwf_500hpa_f012.jpg" alt="ECMWF 500hPa 12h预报" loading="lazy">
-                <div class="label">ECMWF 500hPa 12h预报 (F012)</div>
+                <div class="label">500hPa 12h预报 (F012)</div>
             </div>
             <div class="chart-card">
                 <img src="images/ecmwf_500hpa_f018.jpg" alt="ECMWF 500hPa 18h预报" loading="lazy">
-                <div class="label">ECMWF 500hPa 18h预报 (F018)</div>
+                <div class="label">500hPa 18h预报 (F018)</div>
             </div>
             <div class="chart-card">
                 <img src="images/ecmwf_500hpa_f024.jpg" alt="ECMWF 500hPa 24h预报" loading="lazy">
-                <div class="label">ECMWF 500hPa 24h预报 (F024)</div>
+                <div class="label">500hPa 24h预报 (F024)</div>
+            </div>
+            <div class="chart-card">
+                <img src="images/ecmwf_qinghai_precip_24h.jpg" alt="ECMWF 青海24h降水" loading="lazy">
+                <div class="label">🌧 ECMWF 青海24h累计降水</div>
             </div>
         </div>
-
-        <div style="margin-top:16px;padding:12px;background:rgba(0,0,0,0.2);border-radius:8px;font-size:13px;color:rgba(255,255,255,0.5);">
-            📌 黑色等高线=500hPa位势高度 · 蓝色粗线=588线 · 红色线=温度 · 蓝色风羽=风场 · 绿色填色=700hPa相对湿度≥60%
+        <div style="margin-top:12px;color:rgba(255,255,255,0.3);font-size:12px;">
+            🔍 说明：黑色等高线=500hPa位势高度，蓝色粗线=588线（副高轮廓），红色线=温度场，蓝色风羽=风场，绿色填色=700hPa相对湿度≥60%。ECMWF与GFS对比使用。
         </div>
     </div>
 
     <!-- Footer -->
     <div class="footer">
-        <p>Hermes 气象晨报 · 自动生成于 2026-06-17 06:10 CST</p>
-        <p>数据来源：中国新闻网 · NOAA GFS · ECMWF</p>
-        <p style="margin-top:4px;">© 2026 Hermes Agent · 保留所有权利</p>
+        <p>Hermes 气象晨报 · 每日自动生成</p>
+        <p>数据来源：GFS 0.25° · ECMWF HRES · 中国天气网 · 中国新闻网</p>
+        <p>© 2026 Hermes Agent · Powered by AI</p>
     </div>
 
 </div>
