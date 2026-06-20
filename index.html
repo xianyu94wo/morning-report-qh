@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hermes 气象晨报 · 2026年6月20日</title>
+<title>Hermes 气象晨报 · 2026年6月21日</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #0a0e27; color: #e0e0e0; }
@@ -55,6 +55,11 @@
   .section-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; justify-content: center; }
   .section-nav a { background: rgba(255,255,255,0.05); color: #90caf9; text-decoration: none; padding: 8px 14px; border-radius: 20px; font-size: 13px; border: 1px solid rgba(255,255,255,0.08); }
   .section-nav a:hover { background: rgba(100,181,246,0.15); border-color: #64b5f6; }
+  .fact-card { background: rgba(255,215,0,0.04); border: 1px solid rgba(255,215,0,0.12); border-radius: 8px; padding: 20px; }
+  .fact-card .fact-title { font-size: 18px; font-weight: 700; color: #ffd54f; margin-bottom: 12px; text-align: center; }
+  .fact-card .fact-desc { font-size: 14px; line-height: 1.8; }
+  .fact-card .fact-desc p { margin-bottom: 10px; }
+  .fact-card .fact-desc .key { color: #ffd54f; font-weight: 600; }
 </style>
 </head>
 <body>
@@ -64,15 +69,15 @@
 
 <header>
   <h1>☀️ Hermes 气象晨报</h1>
-  <div class="date">2026-06-20 · 2026年6月20日 · 星期六 · 农历五月初六</div>
-  <div class="subtitle">端午假期第二天 · 明日夏至</div>
+  <div class="date">2026-06-21 · 2026年6月21日 · 星期日 · 农历五月初七</div>
+  <div class="subtitle">🌞 今日夏至 · 北半球白昼最长的一天</div>
 </header>
 
 <div class="section-nav">
   <a href="#weather">📅天气</a>
   <a href="#news">📰新闻</a>
   <a href="#quote">📝金句</a>
-  <a href="#fun">😄趣闻</a>
+  <a href="#fun">🤔冷知识</a>
   <a href="#idiom">📚成语</a>
   <a href="#balance">💰余额</a>
   <a href="#charts">🌤️气象图</a>
@@ -82,51 +87,48 @@
 <div class="section" id="weather">
   <div class="section-title"><span class="emoji">📅</span> 每日天气 · 青海西宁</div>
   <div style="line-height:1.8;font-size:15px;">
-    <p>🏙️ <strong>西宁</strong>：今日多云转晴，气温 13~26℃，偏西风3-4级，空气质量良，适合户外活动。端午假期第二天，温度适宜，早晚温差较大，请注意添衣。</p>
-    <p>🏔️ <strong>青海全省</strong>：受高原短波槽东移影响，海西东部及祁连山区多云有分散性阵雨，东部河谷地区晴间多云。青南地区（果洛、玉树）午后有雷阵雨，局地伴有雷暴大风。北部海北、海南以多云为主。</p>
-    <p>🌡️ <strong>端午假期天气趋势</strong>：明日起夏至（6月21日16时25分），全省大部以晴或多云为主。22日受新一轮西风槽影响，海西东部、海北、海南有中雨，返程请注意天气变化。</p>
-    <p style="margin-top:8px;font-size:13px;color:#90caf9;">数据来源：GFS 0.25° 全球预报 + ECMWF 高分辨率模型 | 详见下方气象图表</p>
+    <p>🏙️ <strong>西宁</strong>：今日小雨转阴，气温 10~20℃，微风<3级。夏至日西宁体感偏凉，午后可能有短时小雨，建议携带雨具出行。</p>
+    <p>🏔️ <strong>青海全省</strong>：受高原短波槽影响，海西东部及祁连山区多云有分散性阵雨；青南地区（果洛、玉树）午后有雷阵雨，局地伴有雷暴大风。海北、海南以多云为主。东部河谷地区早晚有轻雾。</p>
+    <p>🌡️ <strong>夏至天气趋势</strong>：今日16时25分迎来夏至节气，北半球白昼最长。未来一周长江中下游雨势增强，青海大部以多云为主。22日受西风槽影响，海北、海南有中雨，请注意防范。</p>
+    <p style="margin-top:8px;font-size:13px;color:#90caf9;">数据来源：GFS 0.25° 全球预报 + ECMWF 高分辨率模型 · 中国天气网 | 详见下方气象图表</p>
   </div>
 </div>
 
 <!-- 板块2: 最新要闻 -->
 <div class="section" id="news">
   <div class="section-title"><span class="emoji">📰</span> 最新要闻</div>
-
-  <p style="font-size:13px;color:#78909c;margin-bottom:12px;">2026年6月19日-20日 · 来源：中国新闻网</p>
+  <p style="font-size:13px;color:#78909c;margin-bottom:12px;">2026年6月20日-21日 · 来源：中国新闻网</p>
 
   <div style="margin-bottom:16px;">
     <h3 style="font-size:16px;color:#90caf9;margin-bottom:8px;">🇨🇳 国内要闻</h3>
     <ul class="news-list">
-      <li><span class="news-tag tag-domestic">时政</span><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-19/10643746.shtml" target="_blank">习近平亲自命名的村庄：从"干沙滩"变成"金沙滩"——闽宁协作30年硕果</a></li>
-      <li><span class="news-tag tag-domestic">要闻</span><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-19/10643643.shtml" target="_blank">习言道：爱国主义始终是激励各族人民自强不息的强大力量</a></li>
-      <li><span class="news-tag tag-domestic">外交</span><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-19/10643804.shtml" target="_blank">五天三地，敏昂莱访华亮点受关注——中缅命运共同体四根支柱</a></li>
-      <li><span class="news-tag tag-domestic">经济</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-19/10643822.shtml" target="_blank">商务部：将对澳大利亚进口牛肉加征55%关税，6月20日零时起执行</a></li>
-      <li><span class="news-tag tag-domestic">经济</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-18/10643598.shtml" target="_blank">发改委：把中国产业竞争力归因于"补贴"完全错误</a></li>
-      <li><span class="news-tag tag-domestic">经济</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-19/10643906.shtml" target="_blank">中国汽车产业加速迈向价值竞争阶段</a></li>
-      <li><span class="news-tag tag-domestic">经济</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-18/10643601.shtml" target="_blank">七部门共促平台经济大中小企业协同发展（2026-2028行动方案）</a></li>
-      <li><span class="news-tag tag-domestic">交通</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-19/10643908.shtml" target="_blank">端午假期首日全社会跨区域流动预计约2.4亿人次</a></li>
-      <li><span class="news-tag tag-domestic">社会</span><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-19/10643866.shtml" target="_blank">专家回应"12306无票乘车时却有座位"：三大成因详解</a></li>
-      <li><span class="news-tag tag-domestic">民生</span><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-19/10643846.shtml" target="_blank">珠江流域持续强降雨，部分中小河流或现超警洪水</a></li>
-      <li><span class="news-tag tag-domestic">产业</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-19/10643707.shtml" target="_blank">黄土高原"粽子村"：一片苇叶包出2亿元产业</a></li>
-      <li><span class="news-tag tag-domestic">文化</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-19/10643980.shtml" target="_blank">皖北田间"黑科技"：一颗大豆的"数字之旅"</a></li>
+      <li><span class="news-tag tag-domestic">时政</span><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-19/10643746.shtml" target="_blank">习近平亲自命名的村庄：从"干沙滩"变成"金沙滩"——闽宁协作30年</a></li>
+      <li><span class="news-tag tag-domestic">法治</span><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-20/10644116.shtml" target="_blank">释永信一审被判24年，职务侵占挪用资金近3亿元</a></li>
+      <li><span class="news-tag tag-domestic">监管</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-20/10644158.shtml" target="_blank">外卖"补贴战"将迎明确监管红线，"外卖十条"征求意见</a></li>
+      <li><span class="news-tag tag-domestic">交通</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-20/10644183.shtml" target="_blank">6月19日全社会跨区域流动量完成23140.6万人次</a></li>
+      <li><span class="news-tag tag-domestic">科技</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-20/10644156.shtml" target="_blank">人工智能书写世界杯崭新篇章：AI裁判、AI战术分析深度渗透</a></li>
+      <li><span class="news-tag tag-domestic">产业</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-20/10644273.shtml" target="_blank">大疆与影石专利战全面爆发，中美双线法律互诉</a></li>
+      <li><span class="news-tag tag-domestic">天气</span><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-20/10644053.shtml" target="_blank">广西贵州至长江中下游等地有强降雨，暴雨黄色预警持续</a></li>
+      <li><span class="news-tag tag-domestic">文化</span><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-20/10644076.shtml" target="_blank">湖北洪湖凤舟：端午竞渡的别样风景，27.8米非遗凤舟竞渡</a></li>
+      <li><span class="news-tag tag-domestic">侨乡</span><a class="news-link" href="https://www.chinanews.com.cn/hr/2026/06-20/10644079.shtml" target="_blank">端午节侨乡台山粽香飘海内外，日寄超3000条最远至新疆</a></li>
+      <li><span class="news-tag tag-domestic">科普</span><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-20/10644212.shtml" target="_blank">专家解析雨后河水变浑：属正常自然冲刷，1-3天可恢复</a></li>
     </ul>
   </div>
 
   <div>
     <h3 style="font-size:16px;color:#81c784;margin-bottom:8px;">🌏 国际要闻</h3>
     <ul class="news-list">
-      <li><span class="news-tag tag-international">中东</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-19/10643725.shtml" target="_blank">伊朗称霍尔木兹海峡60天内免费通行，费用由伊政府承担</a></li>
-      <li><span class="news-tag tag-international">中东</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-18/10642776.shtml" target="_blank">巴基斯坦总理：伊朗将立即重开霍尔木兹海峡，美国解除封锁</a></li>
-      <li><span class="news-tag tag-international">外交</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-19/10643726.shtml" target="_blank">白宫：美副总统万斯暂不启程前往瑞士，美伊技术会谈待启动</a></li>
-      <li><span class="news-tag tag-international">外交</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-18/10642805.shtml" target="_blank">马克龙发布视频：特朗普在凡尔赛宫签署美伊谅解备忘录</a></li>
-      <li><span class="news-tag tag-international">G7</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-18/10642746.shtml" target="_blank">七国集团峰会在法国闭幕，发布9份成果文件</a></li>
-      <li><span class="news-tag tag-international">美国</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-19/10643781.shtml" target="_blank">服役35年，美国"空军一号"总统专机退役</a></li>
-      <li><span class="news-tag tag-international">欧洲</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-18/10642740.shtml" target="_blank">欧盟提供逾4.9亿欧元援助应对非洲埃博拉疫情</a></li>
+      <li><span class="news-tag tag-international">中东</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-20/10644346.shtml" target="_blank">伊朗军方宣布关闭霍尔木兹海峡，对所有船只停止通行</a></li>
+      <li><span class="news-tag tag-international">欧洲</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-20/10644071.shtml" target="_blank">英国伦敦附近火车相撞致至少1死89伤，11人伤势严重</a></li>
+      <li><span class="news-tag tag-international">中东</span><a class="news-link" href="https://www.chinanews.com.cn/dxw/2026/06-20/10644295.shtml" target="_blank">美伊比尔根山会谈临时取消，李绍先解读僵局能否打破</a></li>
+      <li><span class="news-tag tag-international">外交</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-20/10644337.shtml" target="_blank">"赛考斯"等美国新老朋友端午节做客中国驻美使馆，当场获签证</a></li>
+      <li><span class="news-tag tag-international">美国</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-20/10644343.shtml" target="_blank">近四成美国人不相信美国能再延续250年，民调显示深层不安</a></li>
+      <li><span class="news-tag tag-sports">世界杯</span><a class="news-link" href="https://www.chinanews.com.cn/ty/2026/06-20/10644234.shtml" target="_blank">巴西反超德国登顶世界杯进球榜，土耳其61次射门0进球出局</a></li>
+      <li><span class="news-tag tag-international">G7</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-18/10642746.shtml" target="_blank">七国集团峰会在法国闭幕，发布9份成果文件但未能达成联合公报</a></li>
       <li><span class="news-tag tag-international">中东</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-18/10642741.shtml" target="_blank">去年停火后以军行动致加沙超千人死亡，哈马斯称展现灵活性</a></li>
-      <li><span class="news-tag tag-sports">世界杯</span><a class="news-link" href="https://www.chinanews.com.cn/ty/2026/06-19/10643721.shtml" target="_blank">墨西哥队两战全胜提前出线 韩国队末轮赢球即晋级</a></li>
-      <li><span class="news-tag tag-international">两岸</span><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-19/10643686.shtml" target="_blank">评论："张凌赫现象"凸显两岸同胞可以"双向奔赴"</a></li>
+      <li><span class="news-tag tag-international">亚洲</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-18/10642841.shtml" target="_blank">韩国首尔市长吴世勋被求刑1年半</a></li>
       <li><span class="news-tag tag-international">欧洲</span><a class="news-link" href="https://www.ecns.cn/world/2026-06-18/detail-ihffptmh9486432.shtml" target="_blank">专家：G7内部分歧削弱其全球影响力</a></li>
+      <li><span class="news-tag tag-international">非洲</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-18/10642740.shtml" target="_blank">欧盟提供逾4.9亿欧元援助应对非洲埃博拉疫情</a></li>
     </ul>
   </div>
 </div>
@@ -135,29 +137,30 @@
 <div class="section" id="quote">
   <div class="section-title"><span class="emoji">📝</span> 英文金句</div>
   <div class="quote-box">
-    <div class="english">"The best time to plant a tree was 20 years ago. The second best time is now."</div>
-    <div class="translation">—— 种一棵树最好的时间是十年前，其次是现在。</div>
-    <div class="source">— Chinese Proverb</div>
+    <div class="english">"The sun does not forget a village just because it is small."</div>
+    <div class="translation">—— 太阳不会因为村庄渺小就忘记照耀它。</div>
+    <div class="source">— African Proverb</div>
   </div>
   <div class="quote-box" style="margin-top:12px;">
-    <div class="english">"It does not matter how slowly you go as long as you do not stop."</div>
-    <div class="translation">—— 只要不停下脚步，慢一点也无妨。</div>
-    <div class="source">— Confucius (孔子)</div>
+    <div class="english">"夏至一阴生，稍稍夕漏迟。"</div>
+    <div class="translation">—— 夏至到来阴气初生，傍晚的漏刻稍稍变长。</div>
+    <div class="source">— 白居易《思归》· 今日夏至</div>
   </div>
 </div>
 
-<!-- 板块4: 每日一笑 -->
+<!-- 板块4: 冷知识一则 -->
 <div class="section" id="fun">
-  <div class="section-title"><span class="emoji">😄</span> 每日一笑</div>
-  <div class="joke-content">
-    <p class="joke-question">🤔 程序员去面试，面试官问："你熟悉什么编程语言？"</p>
-    <p class="joke-answer">💬 程序员答："我熟悉的语言很多，英、法、德、日都能写几句。"<br>面试官："……我问的是编程语言。"<br>程序员："哦，那我会写 HTML。"<br>面试官："HTML 不是编程语言，它是标记语言。"<br>程序员："那我没问题了，你什么都知道。"</p>
-
-    <p class="joke-question" style="margin-top:20px;">🐶 小狗对小猫说："你猜我兜里有几块糖？"</p>
-    <p class="joke-answer">💬 小猫说："猜对了给我吃吗？"<br>小狗说："猜对了，我把两块糖都给你。"<br>小猫说："我猜有五块。"<br>小狗说："猜对了！给你！"</p>
-
-    <p class="joke-question" style="margin-top:20px;">📚 老师问小明："为什么做作业的时候不能听音乐？"</p>
-    <p class="joke-answer">💬 小明回答："因为音乐一响，我就想跟着唱，一唱就停不下来，一停不下来作业就写不完……"<br>老师说："所以呢？"<br>小明说："所以我耳机一戴，作业和唱歌都耽误了。"</p>
+  <div class="section-title"><span class="emoji">🤔</span> 冷知识一则</div>
+  <div class="fact-card">
+    <div class="fact-title">🌞 夏至 · 你不知道的六个冷知识</div>
+    <div class="fact-desc">
+      <p><span class="key">① 今天是一年中白昼最长的一天</span><br>2026年夏至发生在6月21日16:25（北京时间）。在北回归线以北地区，今天是全年白昼最长的一天。以北京为例，日照时长达14小时56分钟；而黑龙江漠河的白昼长达近17小时——凌晨3点多天就亮了。</p>
+      <p><span class="key">② "夏至"曾是古代法定节假日</span><br>在汉代至宋代，夏至是重要的官方节日。《汉书》记载，夏至日朝廷放假，百官休息；民间则有祭神祀祖的习俗。宋代甚至放假三天之久。</p>
+      <p><span class="key">③ 夏至并非全年最热的一天</span><br>虽然夏至日照时间最长，但此时地面吸收的热量还在持续积累中，真正的高温要到"小暑""大暑"节气（7月中下旬）才会达到峰值，这叫"热量滞后效应"。</p>
+      <p><span class="key">④ "立竿无影"奇观只在夏至日出现</span><br>在夏至日正午，太阳直射北回归线。如果你恰好位于北回归线上（如云南墨江、广东汕头、广西桂平等地），你会看到自己的影子消失——太阳正好在头顶正上方，形成"立竿无影"的天文奇观。</p>
+      <p><span class="key">⑤ 夏至三候：鹿角解·蝉始鸣·半夏生</span><br>古人将夏至分为三候：一候鹿角解（鹿角开始脱落），二候蝉始鸣（雄蝉开始鸣叫），三候半夏生（喜阴药草半夏开始生长）。每一候五天，合计十五天。</p>
+      <p><span class="key">⑥ 夏至是二十四节气中最早被确定的节气之一</span><br>据《尚书·尧典》记载，远在公元前7世纪，先民就用圭表测日影的方法确定了夏至和冬至。古人发现夏至日正午的日影最短，以此确立了"日永"（白昼最长）的规律。</p>
+    </div>
   </div>
 </div>
 
@@ -165,12 +168,12 @@
 <div class="section" id="idiom">
   <div class="section-title"><span class="emoji">📚</span> 成语典故</div>
   <div class="idiom-box">
-    <div class="idiom-title">厚积薄发</div>
-    <div class="idiom-pinyin">hòu jī bó fā</div>
+    <div class="idiom-title">日长一线</div>
+    <div class="idiom-pinyin">rì cháng yī xiàn</div>
     <div class="idiom-desc">
-      <p><strong>📖 释义</strong>：大量地、充分地积蓄，少量地、慢慢地释放。形容只有准备充分才能办好事情。</p>
-      <p><strong>📜 典故</strong>：出自北宋苏轼《稼说送张琥》："博观而约取，厚积而薄发。"苏轼在这篇送别文章中告诫朋友，做学问要广泛阅览、精要吸取，经过深厚的积累之后才能有所发挥。就像种庄稼一样，只有根深本固，才能枝繁叶茂、果实累累。</p>
-      <p><strong>💡 启示</strong>：学问和事业都需要时间的沉淀。夏至将至，万物繁盛，正是厚积薄发之时——愿你在耕耘中积蓄力量，在时机到来时一展身手。</p>
+      <p><strong>📖 释义</strong>：指冬至以后白昼渐长，每天增长一线那么长。也形容事情进展极其缓慢。但有趣的是，与夏至的"日最短"相对，古人用"一线"这一精妙量词来形容昼夜变化的微妙。</p>
+      <p><strong>📜 典故</strong>：此成语出自南北朝·梁·宗懔《荆楚岁时记》："晋魏间，宫中以红线量日影，冬至后日影添长一线。"说的是古人用红线测量日影长短——夏至日影最短，冬至日影最长，而正因有了夏至的"日极短"，才能感知到每一线光影的变化。夏至日太阳直射北回归线，也是古人最早通过圭表测影认识的天文节点之一。</p>
+      <p><strong>💡 启示</strong>：夏至极昼，阳极而阴生——万物有盛衰，物极必反。今日夏至，愿珍惜一年中最长的白昼，也懂得在最长的日光里积蓄力量，迎接下半年的丰收与转变。</p>
     </div>
   </div>
 </div>
@@ -179,8 +182,8 @@
 <div class="section" id="balance">
   <div class="section-title"><span class="emoji">💰</span> DeepSeek API 余额</div>
   <div class="balance-card">
-    <div class="amount">¥42.41</div>
-    <div class="label">DeepSeek 可用余额（充值 ¥42.41）</div>
+    <div class="amount">¥41.31</div>
+    <div class="label">DeepSeek 可用余额（充值 ¥41.31）</div>
     <div style="margin-top:12px;font-size:13px;color:#a5d6a7;">✅ API 状态正常 · 智谱 CogView-3-Flash 免费画图可用</div>
   </div>
 </div>
@@ -188,7 +191,7 @@
 <!-- 板块7: ECMWF + GFS 气象图 -->
 <div class="section" id="charts">
   <div class="section-title"><span class="emoji">🌤️</span> 全球数值预报图表</div>
-  <p style="font-size:13px;color:#78909c;margin-bottom:16px;">ECMWF 高分辨率模型 + GFS 0.25° 全球预报系统 · 2026年6月20日初始场</p>
+  <p style="font-size:13px;color:#78909c;margin-bottom:16px;">ECMWF 高分辨率模型 + GFS 0.25° 全球预报系统 · 2026年6月21日</p>
 
   <div class="weather-subtitle">🇪🇺 ECMWF 高分辨率预报 · 500hPa 位势高度场</div>
   <div class="weather-grid">
