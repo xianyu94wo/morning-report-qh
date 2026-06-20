@@ -43,6 +43,9 @@
   .fact-content { line-height: 1.8; font-size: 15px; color: #e0e0e0; }
   .fact-content p { margin-bottom: 12px; }
   .fact-content .highlight { color: #ffd54f; font-weight: 600; }
+  .joke-content { font-size: 16px; line-height: 1.9; padding: 10px 0; }
+  .joke-content .joke-question { color: #90caf9; font-weight: 600; margin-bottom: 8px; }
+  .joke-content .joke-answer { color: #ffd54f; font-weight: 500; margin-bottom: 16px; }
   .idiom-box { background: rgba(255,193,7,0.05); border: 1px solid rgba(255,193,7,0.15); border-radius: 8px; padding: 20px; }
   .idiom-box .idiom-title { font-size: 28px; font-weight: 700; color: #ffd54f; text-align: center; margin-bottom: 4px; }
   .idiom-box .idiom-pinyin { font-size: 16px; color: #90caf9; text-align: center; margin-bottom: 12px; }
@@ -52,8 +55,6 @@
   .section-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; justify-content: center; }
   .section-nav a { background: rgba(255,255,255,0.05); color: #90caf9; text-decoration: none; padding: 8px 14px; border-radius: 20px; font-size: 13px; border: 1px solid rgba(255,255,255,0.08); }
   .section-nav a:hover { background: rgba(100,181,246,0.15); border-color: #64b5f6; }
-  .weather-model-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  @media (max-width: 600px) { .weather-model-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -64,14 +65,14 @@
 <header>
   <h1>☀️ Hermes 气象晨报</h1>
   <div class="date">2026-06-20 · 2026年6月20日 · 星期六 · 农历五月初六</div>
-  <div class="subtitle">端午假期第二天 · 夏至将至</div>
+  <div class="subtitle">端午假期第二天 · 明日夏至</div>
 </header>
 
 <div class="section-nav">
   <a href="#weather">📅天气</a>
   <a href="#news">📰新闻</a>
   <a href="#quote">📝金句</a>
-  <a href="#fun">🤔趣闻</a>
+  <a href="#fun">😄趣闻</a>
   <a href="#idiom">📚成语</a>
   <a href="#balance">💰余额</a>
   <a href="#charts">🌤️气象图</a>
@@ -81,9 +82,9 @@
 <div class="section" id="weather">
   <div class="section-title"><span class="emoji">📅</span> 每日天气 · 青海西宁</div>
   <div style="line-height:1.8;font-size:15px;">
-    <p>🏙️ <strong>西宁</strong>：今日多云转晴，气温 12~27℃，微风，空气质量良好，适宜户外活动。</p>
-    <p>🏔️ <strong>青海全省</strong>：受高原短波槽影响，海西及祁连山区多云有分散性阵雨，东部河谷地区晴间多云，青南地区（果洛、玉树）午后有雷阵雨。整体气温适宜，端午出行注意午后对流天气。</p>
-    <p>🌡️ <strong>端午假期天气趋势</strong>：6月20-21日，全省大部以晴或多云为主，东北部地区有4-5级偏西风。22日受新一轮西风槽影响，海西东部、海北、海南有中雨，需留意返程天气变化。</p>
+    <p>🏙️ <strong>西宁</strong>：今日多云转晴，气温 13~26℃，偏西风3-4级，空气质量良，适合户外活动。端午假期第二天，温度适宜，早晚温差较大，请注意添衣。</p>
+    <p>🏔️ <strong>青海全省</strong>：受高原短波槽东移影响，海西东部及祁连山区多云有分散性阵雨，东部河谷地区晴间多云。青南地区（果洛、玉树）午后有雷阵雨，局地伴有雷暴大风。北部海北、海南以多云为主。</p>
+    <p>🌡️ <strong>端午假期天气趋势</strong>：明日起夏至（6月21日16时25分），全省大部以晴或多云为主。22日受新一轮西风槽影响，海西东部、海北、海南有中雨，返程请注意天气变化。</p>
     <p style="margin-top:8px;font-size:13px;color:#90caf9;">数据来源：GFS 0.25° 全球预报 + ECMWF 高分辨率模型 | 详见下方气象图表</p>
   </div>
 </div>
@@ -97,32 +98,35 @@
   <div style="margin-bottom:16px;">
     <h3 style="font-size:16px;color:#90caf9;margin-bottom:8px;">🇨🇳 国内要闻</h3>
     <ul class="news-list">
-      <li><span class="news-tag tag-domestic">时政</span><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-19/10643746.shtml" target="_blank">习近平亲自命名的村庄：从"干沙滩"变成"金沙滩"</a></li>
+      <li><span class="news-tag tag-domestic">时政</span><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-19/10643746.shtml" target="_blank">习近平亲自命名的村庄：从"干沙滩"变成"金沙滩"——闽宁协作30年硕果</a></li>
       <li><span class="news-tag tag-domestic">要闻</span><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-19/10643643.shtml" target="_blank">习言道：爱国主义始终是激励各族人民自强不息的强大力量</a></li>
       <li><span class="news-tag tag-domestic">外交</span><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-19/10643804.shtml" target="_blank">五天三地，敏昂莱访华亮点受关注——中缅命运共同体四根支柱</a></li>
-      <li><span class="news-tag tag-domestic">经济</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-19/10643822.shtml" target="_blank">商务部：将对澳大利亚进口牛肉加征55%关税</a></li>
+      <li><span class="news-tag tag-domestic">经济</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-19/10643822.shtml" target="_blank">商务部：将对澳大利亚进口牛肉加征55%关税，6月20日零时起执行</a></li>
       <li><span class="news-tag tag-domestic">经济</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-18/10643598.shtml" target="_blank">发改委：把中国产业竞争力归因于"补贴"完全错误</a></li>
       <li><span class="news-tag tag-domestic">经济</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-19/10643906.shtml" target="_blank">中国汽车产业加速迈向价值竞争阶段</a></li>
-      <li><span class="news-tag tag-domestic">经济</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-18/10643601.shtml" target="_blank">七部门共促平台经济大中小企业协同发展</a></li>
+      <li><span class="news-tag tag-domestic">经济</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-18/10643601.shtml" target="_blank">七部门共促平台经济大中小企业协同发展（2026-2028行动方案）</a></li>
       <li><span class="news-tag tag-domestic">交通</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-19/10643908.shtml" target="_blank">端午假期首日全社会跨区域流动预计约2.4亿人次</a></li>
-      <li><span class="news-tag tag-domestic">社会</span><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-19/10643866.shtml" target="_blank">专家回应"12306无票却有空座"疑问</a></li>
-      <li><span class="news-tag tag-domestic">文娱</span><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-19/10643653.shtml" target="_blank">除了甜咸粽子，端午还有这些不一样！</a></li>
+      <li><span class="news-tag tag-domestic">社会</span><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-19/10643866.shtml" target="_blank">专家回应"12306无票乘车时却有座位"：三大成因详解</a></li>
+      <li><span class="news-tag tag-domestic">民生</span><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-19/10643846.shtml" target="_blank">珠江流域持续强降雨，部分中小河流或现超警洪水</a></li>
+      <li><span class="news-tag tag-domestic">产业</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-19/10643707.shtml" target="_blank">黄土高原"粽子村"：一片苇叶包出2亿元产业</a></li>
+      <li><span class="news-tag tag-domestic">文化</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-19/10643980.shtml" target="_blank">皖北田间"黑科技"：一颗大豆的"数字之旅"</a></li>
     </ul>
   </div>
 
   <div>
     <h3 style="font-size:16px;color:#81c784;margin-bottom:8px;">🌏 国际要闻</h3>
     <ul class="news-list">
-      <li><span class="news-tag tag-international">G7</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-19/10643726.shtml" target="_blank">白宫：美副总统万斯暂不启程前往瑞士——美伊谈判待启动</a></li>
+      <li><span class="news-tag tag-international">中东</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-19/10643725.shtml" target="_blank">伊朗称霍尔木兹海峡60天内免费通行，费用由伊政府承担</a></li>
+      <li><span class="news-tag tag-international">中东</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-18/10642776.shtml" target="_blank">巴基斯坦总理：伊朗将立即重开霍尔木兹海峡，美国解除封锁</a></li>
+      <li><span class="news-tag tag-international">外交</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-19/10643726.shtml" target="_blank">白宫：美副总统万斯暂不启程前往瑞士，美伊技术会谈待启动</a></li>
+      <li><span class="news-tag tag-international">外交</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-18/10642805.shtml" target="_blank">马克龙发布视频：特朗普在凡尔赛宫签署美伊谅解备忘录</a></li>
+      <li><span class="news-tag tag-international">G7</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-18/10642746.shtml" target="_blank">七国集团峰会在法国闭幕，发布9份成果文件</a></li>
       <li><span class="news-tag tag-international">美国</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-19/10643781.shtml" target="_blank">服役35年，美国"空军一号"总统专机退役</a></li>
+      <li><span class="news-tag tag-international">欧洲</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-18/10642740.shtml" target="_blank">欧盟提供逾4.9亿欧元援助应对非洲埃博拉疫情</a></li>
+      <li><span class="news-tag tag-international">中东</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-18/10642741.shtml" target="_blank">去年停火后以军行动致加沙超千人死亡，哈马斯称展现灵活性</a></li>
       <li><span class="news-tag tag-sports">世界杯</span><a class="news-link" href="https://www.chinanews.com.cn/ty/2026/06-19/10643721.shtml" target="_blank">墨西哥队两战全胜提前出线 韩国队末轮赢球即晋级</a></li>
-      <li><span class="news-tag tag-international">外交</span><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-19/10643686.shtml" target="_blank">"张凌赫现象"凸显两岸同胞可以"双向奔赴"</a></li>
-      <li><span class="news-tag tag-sports">世界杯</span><a class="news-link" href="https://www.chinanews.com.cn/ty/2026/06-19/10643721.shtml" target="_blank">C罗哑火，刚果（金）队爆冷1-1逼平葡萄牙队</a></li>
-      <li><span class="news-tag tag-international">中东</span><a class="news-link" href="https://www.chinanews.com.cn/" target="_blank">巴基斯坦总理：伊朗将立即重开霍尔木兹海峡</a></li>
-      <li><span class="news-tag tag-international">欧洲</span><a class="news-link" href="https://www.chinanews.com.cn/" target="_blank">特朗普宣告"我是老大"——G7峰会未能达成联合公报</a></li>
-      <li><span class="news-tag tag-international">欧洲</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-19/10643726.shtml" target="_blank">乌克兰无人机袭击致莫斯科炼油厂停产</a></li>
-      <li><span class="news-tag tag-international">韩国</span><a class="news-link" href="https://www.chinanews.com.cn/" target="_blank">韩国首尔市长吴世勋被求刑1年半</a></li>
-      <li><span class="news-tag tag-tech">科技</span><a class="news-link" href="https://www.chinanews.com.cn/" target="_blank">中国成功发射卫星互联网低轨22组卫星</a></li>
+      <li><span class="news-tag tag-international">两岸</span><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-19/10643686.shtml" target="_blank">评论："张凌赫现象"凸显两岸同胞可以"双向奔赴"</a></li>
+      <li><span class="news-tag tag-international">欧洲</span><a class="news-link" href="https://www.ecns.cn/world/2026-06-18/detail-ihffptmh9486432.shtml" target="_blank">专家：G7内部分歧削弱其全球影响力</a></li>
     </ul>
   </div>
 </div>
@@ -131,26 +135,29 @@
 <div class="section" id="quote">
   <div class="section-title"><span class="emoji">📝</span> 英文金句</div>
   <div class="quote-box">
-    <div class="english">"The only way to do great work is to love what you do."</div>
-    <div class="translation">—— 成就伟业的唯一途径是热爱你所做的事。</div>
-    <div class="source">— Steve Jobs, 2005 Stanford Commencement Address</div>
+    <div class="english">"The best time to plant a tree was 20 years ago. The second best time is now."</div>
+    <div class="translation">—— 种一棵树最好的时间是十年前，其次是现在。</div>
+    <div class="source">— Chinese Proverb</div>
   </div>
   <div class="quote-box" style="margin-top:12px;">
-    <div class="english">"In the middle of difficulty lies opportunity."</div>
-    <div class="translation">—— 困难之中蕴藏着机遇。</div>
-    <div class="source">— Albert Einstein</div>
+    <div class="english">"It does not matter how slowly you go as long as you do not stop."</div>
+    <div class="translation">—— 只要不停下脚步，慢一点也无妨。</div>
+    <div class="source">— Confucius (孔子)</div>
   </div>
 </div>
 
-<!-- 板块4: 冷知识一则 -->
+<!-- 板块4: 每日一笑 -->
 <div class="section" id="fun">
-  <div class="section-title"><span class="emoji">🤔</span> 冷知识一则</div>
-  <div class="fact-content">
-    <p>📌 <span class="highlight">6月20日·夏至将至</span> —— 今天是2026年的夏至前一天。夏至是北半球白昼最长的一天，今年的夏至发生在北京时间6月21日16时25分。</p>
-    <p>🌍 <span class="highlight">地球的"歪脖子"</span>：地球自转轴倾斜约23.5度，正是这个倾斜角度造就了四季更替和昼夜长短变化。如果没有这个倾斜，地球上就不会有春夏秋冬——每天都将是一样的天气！</p>
-    <p>🐜 <span class="highlight">蚂蚁的"导航系统"</span>：蚂蚁在离开巢穴寻找食物时，会不断计算自己的步数并用太阳的位置来导航。科学家发现，沙漠蚂蚁会在沙丘顶部"停下脚步"，转动身体扫描天空来确定方向——它们拥有内置的"GPS"！</p>
-    <p>☕ <span class="highlight">咖啡的"第二故乡"</span>：咖啡原产于埃塞俄比亚，但如今世界上最大的咖啡生产国是巴西（约占全球产量的三分之一）。云南也是中国主要的咖啡产区，占全国咖啡产量的99%以上。</p>
-    <p>🌊 <span class="highlight">海洋的"呼吸"</span>：海洋吸收了人类活动产生的约30%的二氧化碳，这减缓了全球变暖的速度，但同时也导致海水酸化——威胁珊瑚礁和贝壳类生物的生存。科学家称之为"气候变化的不公平交易"。</p>
+  <div class="section-title"><span class="emoji">😄</span> 每日一笑</div>
+  <div class="joke-content">
+    <p class="joke-question">🤔 程序员去面试，面试官问："你熟悉什么编程语言？"</p>
+    <p class="joke-answer">💬 程序员答："我熟悉的语言很多，英、法、德、日都能写几句。"<br>面试官："……我问的是编程语言。"<br>程序员："哦，那我会写 HTML。"<br>面试官："HTML 不是编程语言，它是标记语言。"<br>程序员："那我没问题了，你什么都知道。"</p>
+
+    <p class="joke-question" style="margin-top:20px;">🐶 小狗对小猫说："你猜我兜里有几块糖？"</p>
+    <p class="joke-answer">💬 小猫说："猜对了给我吃吗？"<br>小狗说："猜对了，我把两块糖都给你。"<br>小猫说："我猜有五块。"<br>小狗说："猜对了！给你！"</p>
+
+    <p class="joke-question" style="margin-top:20px;">📚 老师问小明："为什么做作业的时候不能听音乐？"</p>
+    <p class="joke-answer">💬 小明回答："因为音乐一响，我就想跟着唱，一唱就停不下来，一停不下来作业就写不完……"<br>老师说："所以呢？"<br>小明说："所以我耳机一戴，作业和唱歌都耽误了。"</p>
   </div>
 </div>
 
@@ -158,12 +165,12 @@
 <div class="section" id="idiom">
   <div class="section-title"><span class="emoji">📚</span> 成语典故</div>
   <div class="idiom-box">
-    <div class="idiom-title">一鸣惊人</div>
-    <div class="idiom-pinyin">yī míng jīng rén</div>
+    <div class="idiom-title">厚积薄发</div>
+    <div class="idiom-pinyin">hòu jī bó fā</div>
     <div class="idiom-desc">
-      <p><strong>📖 释义</strong>：比喻平时没有突出的表现，一下子做出惊人的成绩。</p>
-      <p><strong>📜 典故</strong>：出自《史记·滑稽列传》。战国时期，齐威王即位后沉迷酒色，不理朝政。淳于髡用隐语劝谏："齐国有只大鸟，落在王宫里，三年不飞也不叫，大王知道这是什么鸟吗？"齐威王说："此鸟不飞则已，一飞冲天；不鸣则已，一鸣惊人。"从此齐威王励精图治，整顿吏治，发展生产，齐国迅速强盛，诸侯震惊。</p>
-      <p><strong>💡 启示</strong>：厚积薄发，沉潜蓄势，终有振翅高飞之日。</p>
+      <p><strong>📖 释义</strong>：大量地、充分地积蓄，少量地、慢慢地释放。形容只有准备充分才能办好事情。</p>
+      <p><strong>📜 典故</strong>：出自北宋苏轼《稼说送张琥》："博观而约取，厚积而薄发。"苏轼在这篇送别文章中告诫朋友，做学问要广泛阅览、精要吸取，经过深厚的积累之后才能有所发挥。就像种庄稼一样，只有根深本固，才能枝繁叶茂、果实累累。</p>
+      <p><strong>💡 启示</strong>：学问和事业都需要时间的沉淀。夏至将至，万物繁盛，正是厚积薄发之时——愿你在耕耘中积蓄力量，在时机到来时一展身手。</p>
     </div>
   </div>
 </div>
@@ -172,16 +179,16 @@
 <div class="section" id="balance">
   <div class="section-title"><span class="emoji">💰</span> DeepSeek API 余额</div>
   <div class="balance-card">
-    <div class="amount">¥42.90</div>
-    <div class="label">DeepSeek 可用余额（充值 ¥42.90）</div>
+    <div class="amount">¥42.41</div>
+    <div class="label">DeepSeek 可用余额（充值 ¥42.41）</div>
     <div style="margin-top:12px;font-size:13px;color:#a5d6a7;">✅ API 状态正常 · 智谱 CogView-3-Flash 免费画图可用</div>
   </div>
 </div>
 
-<!-- 板块7: GFS + ECMWF 气象图 -->
+<!-- 板块7: ECMWF + GFS 气象图 -->
 <div class="section" id="charts">
   <div class="section-title"><span class="emoji">🌤️</span> 全球数值预报图表</div>
-  <p style="font-size:13px;color:#78909c;margin-bottom:16px;">GFS 0.25° 全球预报系统 + ECMWF 高分辨率模型 · 2026年6月20日初始场</p>
+  <p style="font-size:13px;color:#78909c;margin-bottom:16px;">ECMWF 高分辨率模型 + GFS 0.25° 全球预报系统 · 2026年6月20日初始场</p>
 
   <div class="weather-subtitle">🇪🇺 ECMWF 高分辨率预报 · 500hPa 位势高度场</div>
   <div class="weather-grid">
