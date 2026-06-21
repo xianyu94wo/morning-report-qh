@@ -3,223 +3,268 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hermes 气象晨报 · 2026年6月21日</title>
+<title>Hermes 气象晨报 | 2026年6月22日</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #0a0e27; color: #e0e0e0; }
-  .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-  .back-btn { display: inline-block; color: #64b5f6; text-decoration: none; font-size: 14px; padding: 8px 0; margin-bottom: 10px; }
-  .back-btn:hover { color: #90caf9; }
-  header { background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #1a237e 100%); padding: 40px 30px; border-radius: 16px; text-align: center; margin-bottom: 24px; box-shadow: 0 8px 32px rgba(26,35,126,0.3); }
-  header h1 { font-size: 28px; color: #fff; margin-bottom: 8px; letter-spacing: 4px; }
-  header .date { font-size: 15px; color: #90caf9; margin-bottom: 6px; }
-  header .subtitle { font-size: 13px; color: #7986cb; }
-  .section { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; margin-bottom: 20px; }
-  .section:hover { border-color: rgba(100,181,246,0.2); }
-  .section-title { font-size: 20px; font-weight: 700; margin-bottom: 16px; color: #64b5f6; display: flex; align-items: center; gap: 10px; }
-  .section-title .emoji { font-size: 24px; }
-  .weather-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-bottom: 16px; }
-  .weather-item { background: rgba(255,255,255,0.03); border-radius: 8px; overflow: hidden; text-align: center; }
-  .weather-item img { width: 100%; height: auto; display: block; }
-  .weather-item .label { padding: 6px; font-size: 12px; color: #90caf9; background: rgba(26,35,126,0.3); }
-  .weather-subtitle { font-size: 16px; font-weight: 600; color: #90caf9; margin: 20px 0 12px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); }
-  .news-list { list-style: none; }
-  .news-list li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); line-height: 1.6; }
-  .news-list li:last-child { border-bottom: none; }
-  .news-link { color: #e0e0e0; text-decoration: none; font-size: 15px; }
-  .news-link:hover { color: #64b5f6; text-decoration: underline; }
-  .news-tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; margin-right: 8px; font-weight: 600; vertical-align: middle; }
-  .tag-domestic { background: rgba(100,181,246,0.15); color: #64b5f6; }
-  .tag-international { background: rgba(129,199,132,0.15); color: #81c784; }
-  .tag-sports { background: rgba(255,183,77,0.15); color: #ffb74d; }
-  .tag-tech { background: rgba(206,147,216,0.15); color: #ce93d8; }
-  .quote-box { background: linear-gradient(135deg, rgba(26,35,126,0.15), rgba(100,181,246,0.08)); border-left: 3px solid #64b5f6; border-radius: 8px; padding: 20px; margin: 12px 0; }
-  .quote-box .english { font-size: 18px; font-weight: 600; color: #fff; line-height: 1.5; margin-bottom: 8px; }
-  .quote-box .source { font-size: 13px; color: #90caf9; }
-  .quote-box .translation { font-size: 14px; color: #b0bec5; margin-top: 4px; }
-  .balance-card { background: linear-gradient(135deg, #1b5e20, #2e7d32); border-radius: 12px; padding: 20px; text-align: center; }
-  .balance-card .amount { font-size: 36px; font-weight: 700; color: #fff; }
-  .balance-card .label { font-size: 13px; color: #a5d6a7; margin-top: 4px; }
-  .fact-content { line-height: 1.8; font-size: 15px; color: #e0e0e0; }
-  .fact-content p { margin-bottom: 12px; }
-  .fact-content .highlight { color: #ffd54f; font-weight: 600; }
-  .joke-content { font-size: 16px; line-height: 1.9; padding: 10px 0; }
-  .joke-content .joke-question { color: #90caf9; font-weight: 600; margin-bottom: 8px; }
-  .joke-content .joke-answer { color: #ffd54f; font-weight: 500; margin-bottom: 16px; }
-  .idiom-box { background: rgba(255,193,7,0.05); border: 1px solid rgba(255,193,7,0.15); border-radius: 8px; padding: 20px; }
-  .idiom-box .idiom-title { font-size: 28px; font-weight: 700; color: #ffd54f; text-align: center; margin-bottom: 4px; }
-  .idiom-box .idiom-pinyin { font-size: 16px; color: #90caf9; text-align: center; margin-bottom: 12px; }
-  .idiom-box .idiom-desc { font-size: 14px; line-height: 1.8; }
-  .footer { text-align: center; padding: 30px; color: #546e7a; font-size: 12px; }
-  .footer a { color: #64b5f6; text-decoration: none; }
-  .section-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; justify-content: center; }
-  .section-nav a { background: rgba(255,255,255,0.05); color: #90caf9; text-decoration: none; padding: 8px 14px; border-radius: 20px; font-size: 13px; border: 1px solid rgba(255,255,255,0.08); }
-  .section-nav a:hover { background: rgba(100,181,246,0.15); border-color: #64b5f6; }
-  .fact-card { background: rgba(255,215,0,0.04); border: 1px solid rgba(255,215,0,0.12); border-radius: 8px; padding: 20px; }
-  .fact-card .fact-title { font-size: 18px; font-weight: 700; color: #ffd54f; margin-bottom: 12px; text-align: center; }
-  .fact-card .fact-desc { font-size: 14px; line-height: 1.8; }
-  .fact-card .fact-desc p { margin-bottom: 10px; }
-  .fact-card .fact-desc .key { color: #ffd54f; font-weight: 600; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #f0f2f5; color: #333; }
+.header { background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #3949ab 100%); color: #fff; padding: 30px 20px; text-align: center; position: relative; }
+.header h1 { font-size: 26px; margin-bottom: 8px; letter-spacing: 2px; }
+.header .subtitle { font-size: 14px; opacity: 0.85; }
+.header .date-badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 4px 16px; border-radius: 20px; font-size: 13px; margin-top: 10px; }
+.back-btn { position: absolute; left: 20px; top: 30px; color: #fff; text-decoration: none; font-size: 14px; opacity: 0.8; }
+.back-btn:hover { opacity: 1; }
+.container { max-width: 800px; margin: 0 auto; padding: 16px; }
+.section { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.section h2 { font-size: 18px; margin-bottom: 14px; color: #1a237e; border-left: 4px solid #1a237e; padding-left: 12px; }
+.section h3 { font-size: 15px; margin: 12px 0 8px; color: #455a64; }
+.news-list { list-style: none; }
+.news-list li { padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+.news-list li:last-child { border-bottom: none; }
+.news-link { color: #1a237e; text-decoration: none; font-size: 14px; line-height: 1.6; }
+.news-link:hover { color: #3949ab; text-decoration: underline; }
+.news-link .tag { display: inline-block; background: #e8eaf6; color: #283593; font-size: 11px; padding: 1px 8px; border-radius: 10px; margin-right: 6px; }
+.section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 600px) { .section-grid { grid-template-columns: 1fr; } }
+.weather-box { background: #e3f2fd; border-radius: 10px; padding: 16px; margin-bottom: 12px; }
+.weather-box .city { font-size: 16px; font-weight: 600; color: #1565c0; margin-bottom: 6px; }
+.weather-box .info { font-size: 13px; color: #37474f; line-height: 1.8; }
+.quote-box { background: #fce4ec; border-radius: 10px; padding: 16px; text-align: center; }
+.quote-box .en { font-size: 16px; color: #c62828; font-style: italic; margin-bottom: 6px; }
+.quote-box .cn { font-size: 13px; color: #666; }
+.fact-box { background: #fff8e1; border-radius: 10px; padding: 16px; }
+.fact-box p { font-size: 14px; line-height: 1.8; color: #333; }
+.fact-box .source { font-size: 12px; color: #999; margin-top: 8px; }
+.balance-box { display: flex; align-items: center; justify-content: space-between; }
+.balance-amount { font-size: 24px; font-weight: 700; color: #2e7d32; }
+.balance-label { font-size: 13px; color: #666; }
+.chart-section { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+.chart-section h2 { font-size: 18px; margin-bottom: 14px; color: #1a237e; border-left: 4px solid #1a237e; padding-left: 12px; }
+.chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 600px) { .chart-grid { grid-template-columns: 1fr; } }
+.chart-item { border-radius: 8px; overflow: hidden; background: #fafafa; border: 1px solid #eee; }
+.chart-item img { width: 100%; height: auto; display: block; }
+.chart-item .label { padding: 8px 10px; font-size: 12px; color: #555; text-align: center; background: #f5f5f5; }
+.chart-group-title { font-size: 16px; font-weight: 600; color: #1a237e; margin: 20px 0 12px; padding: 8px 12px; background: #e8eaf6; border-radius: 6px; }
+.divider { height: 1px; background: #e0e0e0; margin: 24px 0; }
+.footer { text-align: center; padding: 20px; color: #999; font-size: 12px; }
+.footer a { color: #1a237e; text-decoration: none; }
 </style>
 </head>
 <body>
+
+<div class="header">
+  <a href="/" class="back-btn">← 返回首页</a>
+  <h1>🌤️ Hermes 气象晨报</h1>
+  <div class="subtitle">每日清晨，为您梳理天气与要闻</div>
+  <div class="date-badge">📅 2026年6月22日 · 星期一</div>
+</div>
+
 <div class="container">
 
-<a href="/" class="back-btn">← 返回首页</a>
-
-<header>
-  <h1>☀️ Hermes 气象晨报</h1>
-  <div class="date">2026-06-21 · 2026年6月21日 · 星期日 · 农历五月初七</div>
-  <div class="subtitle">🌞 今日夏至 · 北半球白昼最长的一天</div>
-</header>
-
-<div class="section-nav">
-  <a href="#weather">📅天气</a>
-  <a href="#news">📰新闻</a>
-  <a href="#quote">📝金句</a>
-  <a href="#fun">🤔冷知识</a>
-  <a href="#idiom">📚成语</a>
-  <a href="#balance">💰余额</a>
-  <a href="#charts">🌤️气象图</a>
-</div>
-
-<!-- 板块1: 每日天气 -->
-<div class="section" id="weather">
-  <div class="section-title"><span class="emoji">📅</span> 每日天气 · 青海西宁</div>
-  <div style="line-height:1.8;font-size:15px;">
-    <p>🏙️ <strong>西宁</strong>：今日小雨转阴，气温 10~20℃，微风<3级。夏至日西宁体感偏凉，午后可能有短时小雨，建议携带雨具出行。</p>
-    <p>🏔️ <strong>青海全省</strong>：受高原短波槽影响，海西东部及祁连山区多云有分散性阵雨；青南地区（果洛、玉树）午后有雷阵雨，局地伴有雷暴大风。海北、海南以多云为主。东部河谷地区早晚有轻雾。</p>
-    <p>🌡️ <strong>夏至天气趋势</strong>：今日16时25分迎来夏至节气，北半球白昼最长。未来一周长江中下游雨势增强，青海大部以多云为主。22日受西风槽影响，海北、海南有中雨，请注意防范。</p>
-    <p style="margin-top:8px;font-size:13px;color:#90caf9;">数据来源：GFS 0.25° 全球预报 + ECMWF 高分辨率模型 · 中国天气网 | 详见下方气象图表</p>
-  </div>
-</div>
-
-<!-- 板块2: 最新要闻 -->
-<div class="section" id="news">
-  <div class="section-title"><span class="emoji">📰</span> 最新要闻</div>
-  <p style="font-size:13px;color:#78909c;margin-bottom:12px;">2026年6月20日-21日 · 来源：中国新闻网</p>
-
-  <div style="margin-bottom:16px;">
-    <h3 style="font-size:16px;color:#90caf9;margin-bottom:8px;">🇨🇳 国内要闻</h3>
-    <ul class="news-list">
-      <li><span class="news-tag tag-domestic">时政</span><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-19/10643746.shtml" target="_blank">习近平亲自命名的村庄：从"干沙滩"变成"金沙滩"——闽宁协作30年</a></li>
-      <li><span class="news-tag tag-domestic">法治</span><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-20/10644116.shtml" target="_blank">释永信一审被判24年，职务侵占挪用资金近3亿元</a></li>
-      <li><span class="news-tag tag-domestic">监管</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-20/10644158.shtml" target="_blank">外卖"补贴战"将迎明确监管红线，"外卖十条"征求意见</a></li>
-      <li><span class="news-tag tag-domestic">交通</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-20/10644183.shtml" target="_blank">6月19日全社会跨区域流动量完成23140.6万人次</a></li>
-      <li><span class="news-tag tag-domestic">科技</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-20/10644156.shtml" target="_blank">人工智能书写世界杯崭新篇章：AI裁判、AI战术分析深度渗透</a></li>
-      <li><span class="news-tag tag-domestic">产业</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-20/10644273.shtml" target="_blank">大疆与影石专利战全面爆发，中美双线法律互诉</a></li>
-      <li><span class="news-tag tag-domestic">天气</span><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-20/10644053.shtml" target="_blank">广西贵州至长江中下游等地有强降雨，暴雨黄色预警持续</a></li>
-      <li><span class="news-tag tag-domestic">文化</span><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-20/10644076.shtml" target="_blank">湖北洪湖凤舟：端午竞渡的别样风景，27.8米非遗凤舟竞渡</a></li>
-      <li><span class="news-tag tag-domestic">侨乡</span><a class="news-link" href="https://www.chinanews.com.cn/hr/2026/06-20/10644079.shtml" target="_blank">端午节侨乡台山粽香飘海内外，日寄超3000条最远至新疆</a></li>
-      <li><span class="news-tag tag-domestic">科普</span><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-20/10644212.shtml" target="_blank">专家解析雨后河水变浑：属正常自然冲刷，1-3天可恢复</a></li>
-    </ul>
-  </div>
-
-  <div>
-    <h3 style="font-size:16px;color:#81c784;margin-bottom:8px;">🌏 国际要闻</h3>
-    <ul class="news-list">
-      <li><span class="news-tag tag-international">中东</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-20/10644346.shtml" target="_blank">伊朗军方宣布关闭霍尔木兹海峡，对所有船只停止通行</a></li>
-      <li><span class="news-tag tag-international">欧洲</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-20/10644071.shtml" target="_blank">英国伦敦附近火车相撞致至少1死89伤，11人伤势严重</a></li>
-      <li><span class="news-tag tag-international">中东</span><a class="news-link" href="https://www.chinanews.com.cn/dxw/2026/06-20/10644295.shtml" target="_blank">美伊比尔根山会谈临时取消，李绍先解读僵局能否打破</a></li>
-      <li><span class="news-tag tag-international">外交</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-20/10644337.shtml" target="_blank">"赛考斯"等美国新老朋友端午节做客中国驻美使馆，当场获签证</a></li>
-      <li><span class="news-tag tag-international">美国</span><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-20/10644343.shtml" target="_blank">近四成美国人不相信美国能再延续250年，民调显示深层不安</a></li>
-      <li><span class="news-tag tag-sports">世界杯</span><a class="news-link" href="https://www.chinanews.com.cn/ty/2026/06-20/10644234.shtml" target="_blank">巴西反超德国登顶世界杯进球榜，土耳其61次射门0进球出局</a></li>
-      <li><span class="news-tag tag-international">G7</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-18/10642746.shtml" target="_blank">七国集团峰会在法国闭幕，发布9份成果文件但未能达成联合公报</a></li>
-      <li><span class="news-tag tag-international">中东</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-18/10642741.shtml" target="_blank">去年停火后以军行动致加沙超千人死亡，哈马斯称展现灵活性</a></li>
-      <li><span class="news-tag tag-international">亚洲</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-18/10642841.shtml" target="_blank">韩国首尔市长吴世勋被求刑1年半</a></li>
-      <li><span class="news-tag tag-international">欧洲</span><a class="news-link" href="https://www.ecns.cn/world/2026-06-18/detail-ihffptmh9486432.shtml" target="_blank">专家：G7内部分歧削弱其全球影响力</a></li>
-      <li><span class="news-tag tag-international">非洲</span><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-18/10642740.shtml" target="_blank">欧盟提供逾4.9亿欧元援助应对非洲埃博拉疫情</a></li>
-    </ul>
-  </div>
-</div>
-
-<!-- 板块3: 英文金句 -->
-<div class="section" id="quote">
-  <div class="section-title"><span class="emoji">📝</span> 英文金句</div>
-  <div class="quote-box">
-    <div class="english">"The sun does not forget a village just because it is small."</div>
-    <div class="translation">—— 太阳不会因为村庄渺小就忘记照耀它。</div>
-    <div class="source">— African Proverb</div>
-  </div>
-  <div class="quote-box" style="margin-top:12px;">
-    <div class="english">"夏至一阴生，稍稍夕漏迟。"</div>
-    <div class="translation">—— 夏至到来阴气初生，傍晚的漏刻稍稍变长。</div>
-    <div class="source">— 白居易《思归》· 今日夏至</div>
-  </div>
-</div>
-
-<!-- 板块4: 冷知识一则 -->
-<div class="section" id="fun">
-  <div class="section-title"><span class="emoji">🤔</span> 冷知识一则</div>
-  <div class="fact-card">
-    <div class="fact-title">🌞 夏至 · 你不知道的六个冷知识</div>
-    <div class="fact-desc">
-      <p><span class="key">① 今天是一年中白昼最长的一天</span><br>2026年夏至发生在6月21日16:25（北京时间）。在北回归线以北地区，今天是全年白昼最长的一天。以北京为例，日照时长达14小时56分钟；而黑龙江漠河的白昼长达近17小时——凌晨3点多天就亮了。</p>
-      <p><span class="key">② "夏至"曾是古代法定节假日</span><br>在汉代至宋代，夏至是重要的官方节日。《汉书》记载，夏至日朝廷放假，百官休息；民间则有祭神祀祖的习俗。宋代甚至放假三天之久。</p>
-      <p><span class="key">③ 夏至并非全年最热的一天</span><br>虽然夏至日照时间最长，但此时地面吸收的热量还在持续积累中，真正的高温要到"小暑""大暑"节气（7月中下旬）才会达到峰值，这叫"热量滞后效应"。</p>
-      <p><span class="key">④ "立竿无影"奇观只在夏至日出现</span><br>在夏至日正午，太阳直射北回归线。如果你恰好位于北回归线上（如云南墨江、广东汕头、广西桂平等地），你会看到自己的影子消失——太阳正好在头顶正上方，形成"立竿无影"的天文奇观。</p>
-      <p><span class="key">⑤ 夏至三候：鹿角解·蝉始鸣·半夏生</span><br>古人将夏至分为三候：一候鹿角解（鹿角开始脱落），二候蝉始鸣（雄蝉开始鸣叫），三候半夏生（喜阴药草半夏开始生长）。每一候五天，合计十五天。</p>
-      <p><span class="key">⑥ 夏至是二十四节气中最早被确定的节气之一</span><br>据《尚书·尧典》记载，远在公元前7世纪，先民就用圭表测日影的方法确定了夏至和冬至。古人发现夏至日正午的日影最短，以此确立了"日永"（白昼最长）的规律。</p>
+  <!-- 📅 每日天气 -->
+  <div class="section">
+    <h2>📅 每日天气</h2>
+    <div class="weather-box">
+      <div class="city">☀️ 青海·西宁</div>
+      <div class="info">
+        <strong>今日（6月22日）· 夏至</strong><br>
+        天气：多云转晴 🌤️<br>
+        气温：12℃ ~ 26℃<br>
+        风向：东南风 3~4级<br>
+        空气质量：良（AQI 65）<br><br>
+        <strong>明日（6月23日）</strong><br>
+        天气：晴间多云 ⛅<br>
+        气温：13℃ ~ 27℃<br>
+        温馨提示：夏至已至，白昼最长，紫外线较强，外出请注意防晒。
+      </div>
+    </div>
+    <div class="weather-box" style="background:#fff3e0;">
+      <div class="city">🌿 全省天气概览</div>
+      <div class="info">
+        今日青海省受高压脊控制，全省大部以晴或多云天气为主。<br>
+        东部河湟谷地最高气温可达26~28℃；<br>
+        青南地区午后有分散性阵雨或雷阵雨。<br>
+        受GFS预报显示，未来24小时青海省无明显降水过程，天气晴好。
+      </div>
     </div>
   </div>
-</div>
 
-<!-- 板块5: 成语典故 -->
-<div class="section" id="idiom">
-  <div class="section-title"><span class="emoji">📚</span> 成语典故</div>
-  <div class="idiom-box">
-    <div class="idiom-title">日长一线</div>
-    <div class="idiom-pinyin">rì cháng yī xiàn</div>
-    <div class="idiom-desc">
-      <p><strong>📖 释义</strong>：指冬至以后白昼渐长，每天增长一线那么长。也形容事情进展极其缓慢。但有趣的是，与夏至的"日最短"相对，古人用"一线"这一精妙量词来形容昼夜变化的微妙。</p>
-      <p><strong>📜 典故</strong>：此成语出自南北朝·梁·宗懔《荆楚岁时记》："晋魏间，宫中以红线量日影，冬至后日影添长一线。"说的是古人用红线测量日影长短——夏至日影最短，冬至日影最长，而正因有了夏至的"日极短"，才能感知到每一线光影的变化。夏至日太阳直射北回归线，也是古人最早通过圭表测影认识的天文节点之一。</p>
-      <p><strong>💡 启示</strong>：夏至极昼，阳极而阴生——万物有盛衰，物极必反。今日夏至，愿珍惜一年中最长的白昼，也懂得在最长的日光里积蓄力量，迎接下半年的丰收与转变。</p>
+  <!-- 📰 最新要闻 -->
+  <div class="section">
+    <h2>📰 最新要闻</h2>
+    <h3>🇨🇳 国内新闻</h3>
+    <ul class="news-list">
+      <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-21/10644667.shtml" target="_blank"><span class="tag">时政</span>【讲习所】跨越山海的牵挂</a></li>
+      <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-21/10644668.shtml" target="_blank"><span class="tag">时政</span>新华社评论员：牢记初心使命 永葆政治本色</a></li>
+      <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-21/10644671.shtml" target="_blank"><span class="tag">时政</span>时政微视频丨拳拳赤子心</a></li>
+      <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-21/10644428.shtml" target="_blank"><span class="tag">反腐</span>中国大唐集团有限公司原党组管理干部付东接受审查调查</a></li>
+      <li><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-21/10644468.shtml" target="_blank"><span class="tag">交通</span>6月21日全国铁路预计发送旅客1794万人次</a></li>
+      <li><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-21/10644660.shtml" target="_blank"><span class="tag">经济</span>端午假期三天中国跨区域人员流动量预计超6.5亿人次</a></li>
+      <li><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-21/10644378.shtml" target="_blank"><span class="tag">经济</span>明日开幕！一组数据读懂本届链博会新亮点</a></li>
+      <li><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-21/10644405.shtml" target="_blank"><span class="tag">经济</span>2026夏季达沃斯进入倒计时 大连各项筹备工作全面就绪</a></li>
+      <li><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-21/10644470.shtml" target="_blank"><span class="tag">灾害</span>自然资源部对安徽湖北湖南贵州启动地质灾害防御Ⅳ级响应</a></li>
+      <li><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-21/10644628.shtml" target="_blank"><span class="tag">天气</span>多预警齐发！这些地方将有大暴雨、特大暴雨 注意防范</a></li>
+      <li><a class="news-link" href="https://www.chinanews.com.cn/hr/2026/06-21/10644381.shtml" target="_blank"><span class="tag">出行</span>中国公民10月15日前可免签前往柬埔寨 中使馆发布提醒</a></li>
+    </ul>
+    <h3 style="margin-top:16px;">🌏 国际新闻</h3>
+    <ul class="news-list">
+      <li><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-21/10644419.shtml" target="_blank"><span class="tag">中东</span>一场"关键考验"：美伊谈判谈什么？前景如何？</a></li>
+      <li><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-21/10644661.shtml" target="_blank"><span class="tag">中东</span>外媒：伊朗、美国和卡塔尔开会讨论黎巴嫩局势</a></li>
+      <li><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-21/10644367.shtml" target="_blank"><span class="tag">外交</span>中国大使在联合国人权理事会成立20周年对话会阐述中方立场</a></li>
+      <li><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-21/10644368.shtml" target="_blank"><span class="tag">中亚</span>哈萨克斯坦加强边境管控防止石油产品非法外运</a></li>
+      <li><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-21/10644449.shtml" target="_blank"><span class="tag">美国</span>仓储设施火灾持续 美国洛杉矶市进入紧急状态</a></li>
+      <li><a class="news-link" href="https://www.chinanews.com.cn/ty/2026/06-21/10644651.shtml" target="_blank"><span class="tag">体育</span>（美加墨世界杯）马宁的一声哨响，中国足球的另一种抵达</a></li>
+      <li><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-21/10644389.shtml" target="_blank"><span class="tag">文化</span>（寻味中华·节令）食面尝新祈丰岁 日长之至盛夏始</a></li>
+      <li><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-21/10644379.shtml" target="_blank"><span class="tag">社会</span>爸，节日快乐！——父亲节特写</a></li>
+      <li><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-21/10644555.shtml" target="_blank"><span class="tag">社会</span>方寸粽叶包裹山海风物 浙江洞头渔嫂何以烹出"共富味"？</a></li>
+      <li><a class="news-link" href="https://www.chinanews.com.cn/jk/2026/06-21/10644434.shtml" target="_blank"><span class="tag">健康</span>夏至如何祛暑湿？这些误区千万别踩</a></li>
+    </ul>
+    <div style="margin-top:12px; text-align:right; font-size:12px; color:#999;">
+      来源：中国新闻网 · 2026年6月21日
     </div>
   </div>
-</div>
 
-<!-- 板块6: DeepSeek余额 -->
-<div class="section" id="balance">
-  <div class="section-title"><span class="emoji">💰</span> DeepSeek API 余额</div>
-  <div class="balance-card">
-    <div class="amount">¥41.31</div>
-    <div class="label">DeepSeek 可用余额（充值 ¥41.31）</div>
-    <div style="margin-top:12px;font-size:13px;color:#a5d6a7;">✅ API 状态正常 · 智谱 CogView-3-Flash 免费画图可用</div>
-  </div>
-</div>
-
-<!-- 板块7: ECMWF + GFS 气象图 -->
-<div class="section" id="charts">
-  <div class="section-title"><span class="emoji">🌤️</span> 全球数值预报图表</div>
-  <p style="font-size:13px;color:#78909c;margin-bottom:16px;">ECMWF 高分辨率模型 + GFS 0.25° 全球预报系统 · 2026年6月21日</p>
-
-  <div class="weather-subtitle">🇪🇺 ECMWF 高分辨率预报 · 500hPa 位势高度场</div>
-  <div class="weather-grid">
-    <div class="weather-item"><img src="images/ecmwf_500hpa_f000.jpg" alt="ECMWF 500hPa F000"><div class="label">ECMWF 500hPa 初始场</div></div>
-    <div class="weather-item"><img src="images/ecmwf_500hpa_f006.jpg" alt="ECMWF 500hPa F006"><div class="label">ECMWF 500hPa +6h</div></div>
-    <div class="weather-item"><img src="images/ecmwf_500hpa_f012.jpg" alt="ECMWF 500hPa F012"><div class="label">ECMWF 500hPa +12h</div></div>
-    <div class="weather-item"><img src="images/ecmwf_500hpa_f018.jpg" alt="ECMWF 500hPa F018"><div class="label">ECMWF 500hPa +18h</div></div>
-    <div class="weather-item"><img src="images/ecmwf_500hpa_f024.jpg" alt="ECMWF 500hPa F024"><div class="label">ECMWF 500hPa +24h</div></div>
-    <div class="weather-item"><img src="images/ecmwf_qinghai_precip_24h.jpg" alt="ECMWF青海24h降水"><div class="label">ECMWF 青海24h累计降水</div></div>
+  <!-- 📝 英文金句 -->
+  <div class="section">
+    <h2>📝 英文金句</h2>
+    <div class="quote-box">
+      <div class="en">"The summer solstice is a time for strength and vitality, for action and movement."</div>
+      <div class="cn">—— 夏至是充满力量与活力的时节，是行动与前进的时刻。</div>
+      <div style="margin-top:8px; font-size:12px; color:#999;">— Carolyne Roehm</div>
+    </div>
   </div>
 
-  <div class="weather-subtitle">🇨🇳 GFS 全球预报 · 500hPa 位势高度场</div>
-  <div class="weather-grid">
-    <div class="weather-item"><img src="images/gfs_500hpa_f000.jpg" alt="GFS 500hPa F000"><div class="label">GFS 500hPa 初始场</div></div>
-    <div class="weather-item"><img src="images/gfs_500hpa_f006.jpg" alt="GFS 500hPa F006"><div class="label">GFS 500hPa +6h</div></div>
-    <div class="weather-item"><img src="images/gfs_500hpa_f012.jpg" alt="GFS 500hPa F012"><div class="label">GFS 500hPa +12h</div></div>
-    <div class="weather-item"><img src="images/gfs_500hpa_f018.jpg" alt="GFS 500hPa F018"><div class="label">GFS 500hPa +18h</div></div>
-    <div class="weather-item"><img src="images/gfs_500hpa_f024.jpg" alt="GFS 500hPa F024"><div class="label">GFS 500hPa +24h</div></div>
-    <div class="weather-item"><img src="images/gfs_qinghai_precip_24h.jpg" alt="青海24h降水"><div class="label">GFS 青海24h累计降水</div></div>
+  <!-- 🤔 冷知识一则 -->
+  <div class="section">
+    <h2>🤔 冷知识一则</h2>
+    <div class="fact-box">
+      <p><strong>📌 6月22日 · 夏至与历史</strong></p>
+      <p>
+        今天（6月22日）是北半球一年中白昼最长的一天——<strong>夏至</strong>。 
+        "夏至"一词最早可追溯至《周礼·春官》："以夏日至致地物鬽。" 
+      </p>
+      <p>
+        在历史上，今天还发生了这些有趣的事：<br>
+        🏛️ <strong>1633年</strong>——伽利略被迫在罗马宗教裁判所面前宣布放弃"日心说"，
+        但据说他低声嘟囔了一句："可是它仍在转动"（Eppur si muove）。<br>
+        ⚔️ <strong>1941年</strong>——纳粹德国发动"巴巴罗萨计划"入侵苏联，
+        这是人类历史上规模最大的军事行动之一，最终深刻改变了二战走向。<br>
+        🎬 <strong>1987年</strong>——韩国演员李敏镐出生，后凭《花样男子》《继承者们》等作品风靡亚洲。<br>
+        🌍 从2015年起，联合国将6月22日定为<strong>联合国公共服务日</strong>，
+        表彰公共服务对发展的贡献。
+      </p>
+      <div class="source">来源：维基百科、联合国官网</div>
+    </div>
   </div>
+
+  <!-- 📚 成语典故 -->
+  <div class="section">
+    <h2>📚 成语典故</h2>
+    <div class="fact-box" style="background:#e8f5e9;">
+      <p><strong>🎯 今日成语：日长一线</strong></p>
+      <p>
+        <strong>释义：</strong>指冬至以后白昼渐长，也形容天气日渐暖和。语出《南史·梁本纪》，
+        古人以日影长度变化来测时令。<br>
+        <strong>例句：</strong>夏至时节，日长一线，万物繁盛，正是一年中最有活力的光景。<br>
+        <strong>近义：</strong>昼长夜短、日渐天长<br>
+        <strong>用法：</strong>形容夏季白昼漫长、生机盎然的景象。
+      </p>
+      <div class="source">出处：《南史·梁本纪》</div>
+    </div>
+  </div>
+
+  <!-- 💰 DeepSeek余额 -->
+  <div class="section">
+    <h2>💰 DeepSeek 余额</h2>
+    <div class="balance-box">
+      <div>
+        <div class="balance-amount">¥40.64</div>
+        <div class="balance-label">可用余额</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:13px; color:#2e7d32;">✅ 状态正常</div>
+        <div style="font-size:12px; color:#999;">智谱 CogView-3-Flash 免费可用</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🌤️ ECMWF + GFS 气象图 -->
+  <div class="chart-section">
+    <h2>🌤️ 数值天气预报图</h2>
+
+    <!-- ECMWF -->
+    <div class="chart-group-title">🇪🇺 ECMWF 欧洲中期天气预报中心</div>
+    <div class="chart-grid">
+      <div class="chart-item">
+        <img src="images/ecmwf_500hpa_f000.jpg" alt="ECMWF 500hPa 初始场" loading="lazy">
+        <div class="label">ECMWF 500hPa 初始场（分析场）</div>
+      </div>
+      <div class="chart-item">
+        <img src="images/ecmwf_500hpa_f006.jpg" alt="ECMWF 500hPa +6h" loading="lazy">
+        <div class="label">ECMWF 500hPa +6h 预报</div>
+      </div>
+      <div class="chart-item">
+        <img src="images/ecmwf_500hpa_f012.jpg" alt="ECMWF 500hPa +12h" loading="lazy">
+        <div class="label">ECMWF 500hPa +12h 预报</div>
+      </div>
+      <div class="chart-item">
+        <img src="images/ecmwf_500hpa_f018.jpg" alt="ECMWF 500hPa +18h" loading="lazy">
+        <div class="label">ECMWF 500hPa +18h 预报</div>
+      </div>
+      <div class="chart-item">
+        <img src="images/ecmwf_500hpa_f024.jpg" alt="ECMWF 500hPa +24h" loading="lazy">
+        <div class="label">ECMWF 500hPa +24h 预报</div>
+      </div>
+      <div class="chart-item">
+        <img src="images/ecmwf_qinghai_precip_24h.jpg" alt="ECMWF 青海降水" loading="lazy">
+        <div class="label">ECMWF 青海省24h累计降水图</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- GFS -->
+    <div class="chart-group-title">🇨🇳 GFS 全球预报系统（美国NCEP）</div>
+    <div class="chart-grid">
+      <div class="chart-item">
+        <img src="images/gfs_500hpa_f000.jpg" alt="GFS 500hPa 初始场" loading="lazy">
+        <div class="label">GFS 500hPa 初始场（分析场）</div>
+      </div>
+      <div class="chart-item">
+        <img src="images/gfs_500hpa_f006.jpg" alt="GFS 500hPa +6h" loading="lazy">
+        <div class="label">GFS 500hPa +6h 预报</div>
+      </div>
+      <div class="chart-item">
+        <img src="images/gfs_500hpa_f012.jpg" alt="GFS 500hPa +12h" loading="lazy">
+        <div class="label">GFS 500hPa +12h 预报</div>
+      </div>
+      <div class="chart-item">
+        <img src="images/gfs_500hpa_f018.jpg" alt="GFS 500hPa +18h" loading="lazy">
+        <div class="label">GFS 500hPa +18h 预报</div>
+      </div>
+      <div class="chart-item">
+        <img src="images/gfs_500hpa_f024.jpg" alt="GFS 500hPa +24h" loading="lazy">
+        <div class="label">GFS 500hPa +24h 预报</div>
+      </div>
+      <div class="chart-item">
+        <img src="images/gfs_qinghai_precip_24h.jpg" alt="GFS 青海降水" loading="lazy">
+        <div class="label">GFS 青海省24h累计降水图</div>
+      </div>
+    </div>
+
+    <div style="margin-top:12px; font-size:12px; color:#999; text-align:center;">
+      🗺️ 起报时次：ECMWF 2026-06-21 00Z · GFS 2026-06-21 18Z
+    </div>
+  </div>
+
+  <!-- 页脚 -->
+  <div class="footer">
+    <p>📡 数据来源：ECMWF · GFS 0.25° · 中国新闻网</p>
+    <p>🤖 由 Hermes Agent 自动生成 · <a href="https://hermes-agent.nousresearch.com" target="_blank">Hermes Agent</a></p>
+    <p style="margin-top:8px;">© 2026 Hermes 气象晨报 · 每日清晨06:10更新</p>
+  </div>
+
 </div>
 
-<div class="footer">
-  <p>Hermes 气象晨报 · 每日06:10自动更新</p>
-  <p>数据来源：GFS 0.25° / ECMWF HRES · 新闻来源：中国新闻网</p>
-  <p>© 2026 Hermes Agent · <a href="/">返回首页</a></p>
-</div>
-
-</div>
 </body>
 </html>
