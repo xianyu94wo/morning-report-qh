@@ -3,324 +3,210 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hermes 气象日报 | 2026年6月24日</title>
+<title>Hermes 气象晨报 | 2026年6月25日</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans SC', sans-serif; background: #f0f2f5; color: #333; }
-.header { background: linear-gradient(135deg, #1a237e, #283593); color: #fff; padding: 30px 20px; text-align: center; position: relative; }
-.header h1 { font-size: 28px; letter-spacing: 2px; margin-bottom: 6px; }
-.header .date { font-size: 14px; opacity: 0.85; }
-.header .back-btn { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: #fff; text-decoration: none; font-size: 14px; opacity: 0.85; }
-.header .back-btn:hover { opacity: 1; }
-.container { max-width: 720px; margin: 0 auto; padding: 16px; }
-.section { background: #fff; border-radius: 14px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
-.section h2 { font-size: 20px; color: #1a237e; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #e8eaf6; }
-.news-item { padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
-.news-item:last-child { border-bottom: none; }
-.news-item a { color: #333; text-decoration: none; font-size: 15px; line-height: 1.6; display: block; }
-.news-item a:hover { color: #1a237e; }
-.news-meta { font-size: 12px; color: #999; margin-top: 3px; }
-.tag { display: inline-block; background: #e8eaf6; color: #1a237e; font-size: 11px; padding: 1px 8px; border-radius: 10px; margin-right: 6px; }
-.weather-card { background: linear-gradient(135deg, #e3f2fd, #e8eaf6); border-radius: 12px; padding: 16px; margin-bottom: 10px; }
-.weather-card .temp { font-size: 32px; font-weight: 700; color: #1a237e; }
-.weather-card .desc { font-size: 14px; color: #555; margin-top: 6px; }
-.fact-box { background: #fff8e1; border-left: 4px solid #ffa000; padding: 14px 16px; border-radius: 0 10px 10px 0; margin: 10px 0; }
-.fact-box p { font-size: 15px; line-height: 1.8; color: #555; }
-.quote-box { background: #f5f5f5; border-left: 4px solid #1a237e; padding: 14px 16px; border-radius: 0 10px 10px 0; margin: 10px 0; }
-.quote-box .en { font-size: 16px; font-style: italic; color: #333; line-height: 1.8; }
+body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif; background: #f0f2f5; color: #333; line-height: 1.7; }
+.container { max-width: 900px; margin: 0 auto; padding: 20px 16px; }
+.header { background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #3949ab 100%); color: white; padding: 36px 24px; border-radius: 16px; text-align: center; margin-bottom: 24px; position: relative; box-shadow: 0 4px 20px rgba(26,35,126,0.3); }
+.header .back-btn { position: absolute; left: 20px; top: 20px; color: rgba(255,255,255,0.8); text-decoration: none; font-size: 14px; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; transition: all 0.2s; }
+.header .back-btn:hover { background: rgba(255,255,255,0.15); color: white; }
+.header h1 { font-size: 26px; font-weight: 700; margin-bottom: 6px; }
+.header .date { font-size: 15px; opacity: 0.85; }
+.header .subtitle { font-size: 13px; opacity: 0.65; margin-top: 8px; }
+.section { background: white; border-radius: 14px; padding: 24px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid #e8ecf1; }
+.section-title { font-size: 20px; font-weight: 700; color: #1a237e; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 3px solid #e8ecf1; display: flex; align-items: center; gap: 8px; }
+.section-title .icon { font-size: 24px; }
+.weather-card { background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+.weather-card .city { font-size: 18px; font-weight: 600; color: #1565c0; margin-bottom: 8px; }
+.weather-card .temp { font-size: 42px; font-weight: 300; color: #0d47a1; }
+.weather-card .temp span { font-size: 18px; font-weight: 400; }
+.weather-card .desc { font-size: 15px; color: #37474f; margin-top: 8px; }
+.weather-card .detail { font-size: 14px; color: #546e7a; margin-top: 6px; }
+.news-list { list-style: none; }
+.news-list li { padding: 10px 0; border-bottom: 1px solid #f0f2f5; }
+.news-list li:last-child { border-bottom: none; }
+.news-link { color: #1a237e; text-decoration: none; font-size: 15px; display: block; transition: color 0.2s; }
+.news-link:hover { color: #3949ab; text-decoration: underline; }
+.news-link .tag { display: inline-block; font-size: 11px; padding: 1px 8px; border-radius: 10px; margin-right: 6px; font-weight: 600; vertical-align: middle; }
+.tag-domestic { background: #e3f2fd; color: #1565c0; }
+.tag-international { background: #fce4ec; color: #c62828; }
+.quote-box { background: linear-gradient(135deg, #fff8e1, #fff3e0); border-left: 4px solid #ff8f00; padding: 16px 20px; border-radius: 0 10px 10px 0; margin: 12px 0; }
+.quote-box .en { font-size: 18px; font-weight: 500; color: #333; font-style: italic; }
 .quote-box .cn { font-size: 14px; color: #666; margin-top: 6px; }
-.idiom-box { background: #f3e5f5; border-radius: 12px; padding: 16px; margin: 10px 0; }
-.idiom-box .idiom-title { font-size: 22px; font-weight: 700; color: #6a1b9a; }
-.idiom-box .idiom-py { font-size: 13px; color: #999; margin: 4px 0 8px; }
-.idiom-box .idiom-desc { font-size: 14px; line-height: 1.8; color: #555; }
-.balance-box { display: flex; align-items: center; gap: 12px; background: #e8f5e9; border-radius: 10px; padding: 14px 16px; }
-.balance-box .amount { font-size: 24px; font-weight: 700; color: #2e7d32; }
-.balance-box .label { font-size: 13px; color: #555; }
-.image-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 12px; }
-.image-grid img { width: 100%; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-.image-caption { font-size: 13px; color: #666; text-align: center; margin-top: 4px; }
-.model-header { font-size: 17px; font-weight: 700; color: #1a237e; margin: 18px 0 10px; padding: 8px 0; border-bottom: 1px dashed #c5cae9; }
-.footer { text-align: center; padding: 24px 16px; color: #999; font-size: 12px; }
-.footer a { color: #1a237e; text-decoration: none; }
-@media (max-width: 480px) { .header h1 { font-size: 22px; } .section { padding: 14px; } }
+.quote-box .author { font-size: 13px; color: #999; margin-top: 6px; text-align: right; }
+.fun-fact { background: linear-gradient(135deg, #f3e5f5, #e8f5e9); border-radius: 12px; padding: 20px; }
+.fun-fact h3 { font-size: 17px; color: #6a1b9a; margin-bottom: 10px; }
+.fun-fact p { font-size: 15px; color: #333; margin-bottom: 8px; line-height: 1.8; }
+.idiom-box { background: #fff3e0; border-radius: 12px; padding: 20px; }
+.idiom-box .idiom-title { font-size: 28px; font-weight: 700; color: #e65100; text-align: center; margin-bottom: 8px; }
+.idiom-box .pinyin { text-align: center; color: #888; font-size: 14px; margin-bottom: 12px; }
+.idiom-box .meaning { font-size: 15px; color: #333; }
+.idiom-box .story { font-size: 14px; color: #555; margin-top: 8px; padding: 12px; background: rgba(255,255,255,0.7); border-radius: 8px; }
+.balance-box { display: flex; align-items: center; justify-content: space-between; background: linear-gradient(135deg, #e8f5e9, #c8e6c9); padding: 16px 20px; border-radius: 12px; }
+.balance-box .label { font-size: 15px; color: #2e7d32; }
+.balance-box .amount { font-size: 28px; font-weight: 700; color: #1b5e20; }
+.balance-box .status { font-size: 13px; color: #558b2f; }
+.weather-imgs h3 { font-size: 18px; color: #1a237e; margin: 20px 0 10px; padding-bottom: 6px; border-bottom: 2px solid #e0e0e0; }
+.weather-imgs h3:first-of-type { margin-top: 0; }
+.img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
+.img-grid .img-item { border-radius: 10px; overflow: hidden; background: #f5f5f5; border: 1px solid #e0e0e0; }
+.img-grid .img-item img { width: 100%; height: auto; display: block; }
+.img-grid .img-item .label { padding: 6px 10px; font-size: 12px; color: #555; text-align: center; background: #fafafa; }
+@media (max-width: 600px) {
+  .container { padding: 12px 8px; }
+  .header { padding: 28px 16px; }
+  .header h1 { font-size: 22px; }
+  .section { padding: 16px; }
+  .img-grid { grid-template-columns: 1fr; }
+  .balance-box { flex-direction: column; text-align: center; gap: 8px; }
+}
+.back-top { position: fixed; bottom: 30px; right: 20px; background: #1a237e; color: white; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); z-index: 100; }
+.footer { text-align: center; padding: 20px; color: #999; font-size: 12px; }
 </style>
 </head>
 <body>
 
-<div class="header">
-  <a href="/" class="back-btn">← 返回首页</a>
-  <h1>Hermes 气象日报</h1>
-  <div class="date">📅 2026年6月24日 · 星期三</div>
-</div>
-
 <div class="container">
 
-  <!-- 📅 每日天气 -->
-  <div class="section">
-    <h2>📅 每日天气 · 青海/西宁</h2>
-    <div class="weather-card">
-      <div>☁️ 西宁 · 今日天气</div>
-      <div class="temp">14°C ~ 24°C</div>
-      <div class="desc">多云转阴，午后有阵雨或雷阵雨。南风3~4级。<br>青海省大部受高原槽东移影响，预计海北、海东、海南等地有中雨，局地大雨。<br>降水中心位于 102.0°E, 33.2°N，24h累计降水量约 38.4mm。</div>
-      <div style="margin-top:8px;font-size:13px;color:#666;">
-        🔵 GFS 起报时次: 2026-06-23 18Z (北京时 2026-06-24 02:00)<br>
-        🟢 ECMWF 起报时次: 2026-06-24 00Z
-      </div>
+<!-- Header -->
+<div class="header">
+  <a href="/" class="back-btn">← 返回首页</a>
+  <h1>☀️ Hermes 气象晨报</h1>
+  <div class="date">2026年6月25日 · 星期四 · 农历五月十一</div>
+  <div class="subtitle">每日清晨，准时送达</div>
+</div>
+
+<!-- Section 1: 每日天气 -->
+<div class="section">
+  <div class="section-title"><span class="icon">📅</span> 每日天气 · 青海西宁</div>
+  <div class="weather-card">
+    <div class="city">📍 西宁市</div>
+    <div class="temp">10°C ~ 21°C <span>小雨转多云</span></div>
+    <div class="desc">🌧️ 今日西宁小雨，午后转多云，东风3-4级。体感凉爽，出门请携带雨具。</div>
+    <div class="detail">💡 青海省东部有降水过程，青南地区局地有中雨。GFS显示青藏高原东部有降水中心，24h累计降水约15mm。</div>
+    <div class="detail">🌡️ 六月西宁平均气温15.4°C，昼夜温差较大，早晚建议添加薄外套。</div>
+  </div>
+</div>
+
+<!-- Section 2: 最新要闻 -->
+<div class="section">
+  <div class="section-title"><span class="icon">📰</span> 最新要闻</div>
+
+  <h3 style="color:#1565c0; font-size:16px; margin:12px 0 8px;">🇨🇳 国内新闻</h3>
+  <ul class="news-list">
+    <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-24/10646494.shtml" target="_blank"><span class="tag tag-domestic">要闻</span>习近平在山东德州考察：强调农业农村现代化关系中国式现代化全局</a></li>
+    <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-24/10646662.shtml" target="_blank"><span class="tag tag-domestic">要闻</span>习近平考察山东德州西于架村：齐心协力走好新的长征路</a></li>
+    <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-24/10646649.shtml" target="_blank"><span class="tag tag-domestic">要闻</span>李强出席夏季达沃斯论坛工商界代表座谈会：贸易战关税战没有赢家</a></li>
+    <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-24/10646546.shtml" target="_blank"><span class="tag tag-domestic">政协</span>全国政协十四届常委会第十七次会议闭幕，王沪宁主持并讲话</a></li>
+    <li><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-24/10646556.shtml" target="_blank"><span class="tag tag-domestic">经济</span>中国在夏季达沃斯递出"机遇清单"：前5月新设外资企业25297家</a></li>
+    <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-24/10646136.shtml" target="_blank"><span class="tag tag-domestic">两岸</span>国台办阐释"和平统一后，台湾对外交往会更好"</a></li>
+    <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-24/10646551.shtml" target="_blank"><span class="tag tag-domestic">交流</span>美方人士：美中人文交流不是可选项，而是必选项</a></li>
+    <li><a class="news-link" href="https://www.chinanews.com.cn/txy/2026/06-24/10646601.shtml" target="_blank"><span class="tag tag-domestic">数据</span>一组数据彰显民族地区同心奋进辉煌成果：五大自治区GDP增长5.41万亿</a></li>
+    <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-24/10646244.shtml" target="_blank"><span class="tag tag-domestic">反腐</span>国家国防科工局副局长卞志刚任上被查</a></li>
+    <li><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-24/10646364.shtml" target="_blank"><span class="tag tag-domestic">科技</span>AI普惠受关注——2026年世界移动通信大会（上海）开幕</a></li>
+  </ul>
+
+  <h3 style="color:#c62828; font-size:16px; margin:16px 0 8px;">🌐 国际新闻</h3>
+  <ul class="news-list">
+    <li><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-24/10646251.shtml" target="_blank"><span class="tag tag-international">美国</span>美参议院通过限制特朗普对伊动武决议 遭特朗普炮轰</a></li>
+    <li><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-24/10646021.shtml" target="_blank"><span class="tag tag-international">美国</span>美参议院首次通过结束对伊朗军事行动法案 仅具象征意义</a></li>
+    <li><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-24/10646406.shtml" target="_blank"><span class="tag tag-international">中东</span>巴基斯坦：美伊技术性谈判将于未来几天恢复</a></li>
+    <li><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-24/10646366.shtml" target="_blank"><span class="tag tag-international">中亚</span>哈萨克斯坦拟重塑经济特区发展模式：过去25年GDP贡献仅1%</a></li>
+    <li><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-24/10646514.shtml" target="_blank"><span class="tag tag-international">东南亚</span>印尼推出26.34万亿印尼盾（约15亿美元）经济刺激计划</a></li>
+    <li><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-24/10646436.shtml" target="_blank"><span class="tag tag-international">韩国</span>韩国4月出生人口同比增加18%，创2019年以来同月新高</a></li>
+    <li><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-24/10646348.shtml" target="_blank"><span class="tag tag-international">韩国</span>韩国执政党共同民主党党首郑清来宣布辞职 8月选举新党首</a></li>
+    <li><a class="news-link" href="https://www.chinanews.com.cn/ty/2026/06-24/10646395.shtml" target="_blank"><span class="tag tag-international">体育</span>C罗哑火！刚果（金）队爆冷1比1逼平葡萄牙队</a></li>
+    <li><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-24/10646662.shtml" target="_blank"><span class="tag tag-international">欧洲</span>热浪持续升级，欧洲多国遭遇致命"烤"验</a></li>
+    <li><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-24/10646434.shtml" target="_blank"><span class="tag tag-international">财经</span>臻宝科技科创板上市首日涨超12倍，中一签最高赚27万</a></li>
+  </ul>
+</div>
+
+<!-- Section 3: 英文金句 -->
+<div class="section">
+  <div class="section-title"><span class="icon">📝</span> 每日金句</div>
+  <div class="quote-box">
+    <div class="en">"The only way to do great work is to love what you do."</div>
+    <div class="cn">成就伟业的唯一途径是热爱你所做的事。</div>
+    <div class="author">—— Steve Jobs</div>
+  </div>
+</div>
+
+<!-- Section 4: 冷知识一则 -->
+<div class="section">
+  <div class="section-title"><span class="icon">🤔</span> 冷知识一则 · 6月25日</div>
+  <div class="fun-fact">
+    <h3>📌 6月25日 —— "全国土地日"的由来</h3>
+    <p>1986年6月25日，第六届全国人大常委会第十六次会议通过并颁布了新中国成立以来第一部《中华人民共和国土地管理法》。为纪念这一里程碑，国务院决定将每年的6月25日定为<strong>"全国土地日"</strong>，这也是我国第一个专门为保护土地资源而设立的宣传纪念日。</p>
+    <p>📖 在其他历史同日：</p>
+    <p>• 1950年6月25日，朝鲜内战爆发。<br>
+    • 1991年6月25日，克罗地亚和斯洛文尼亚宣布独立，南斯拉夫开始解体。<br>
+    • 2009年6月25日，流行音乐之王迈克尔·杰克逊（Michael Jackson）在洛杉矶逝世，享年50岁。他的《Thriller》专辑至今仍是全球销量最高的专辑之一。</p>
+  </div>
+</div>
+
+<!-- Section 5: 成语典故 -->
+<div class="section">
+  <div class="section-title"><span class="icon">📚</span> 成语典故</div>
+  <div class="idiom-box">
+    <div class="idiom-title">百折不挠</div>
+    <div class="pinyin">bǎi zhé bù náo</div>
+    <div class="meaning"><strong>释义：</strong>无论受到多少次挫折，都不屈服退缩。形容意志坚强。</div>
+    <div class="story"><strong>📖 典故：</strong>出自汉·蔡邕《太尉乔玄碑》："其性庄，疾华尚朴，有百折不挠，临大节而不可夺之风。"东汉官员乔玄以刚毅正直著称，为官清正，敢于与恶势力斗争，即使遭受挫折也绝不屈服。后人用"百折不挠"来形容这种坚毅不屈的精神。</div>
+  </div>
+</div>
+
+<!-- Section 6: DeepSeek余额 -->
+<div class="section">
+  <div class="section-title"><span class="icon">💰</span> DeepSeek 账户余额</div>
+  <div class="balance-box">
+    <div>
+      <div class="label">💳 当前余额</div>
+      <div class="amount">¥34.02</div>
+    </div>
+    <div>
+      <div class="status">✅ API 可用</div>
+      <div class="status" style="margin-top:4px;">📊 充值：34.02 元</div>
+      <div class="status">🆗 智谱CogView-3-Flash 免费画图可用</div>
     </div>
   </div>
+</div>
 
-  <!-- 📰 最新要闻 -->
-  <div class="section">
-    <h2>📰 最新要闻 · 6月23日</h2>
-    <h3 style="font-size:15px;color:#1a237e;margin-bottom:10px;">🇨🇳 国内新闻</h3>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/gn/2026/06-23/10645849.shtml" target="_blank">
-        <span class="tag">要闻</span>《习近平党建文选》第一卷、第二卷出版发行
-        <div class="news-meta">中新社 · 6月23日</div>
-      </a>
-    </div>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/gn/2026/06-23/10645928.shtml" target="_blank">
-        <span class="tag">外交</span>柬埔寨人民党主席、参议院主席洪森将于6月25日至27日访华
-        <div class="news-meta">中新社 · 6月23日</div>
-      </a>
-    </div>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/gn/2026/06-23/10645891.shtml" target="_blank">
-        <span class="tag">外交</span>李强会见韩国总理金民锡：推动中韩战略合作伙伴关系健康稳定发展
-        <div class="news-meta">中新社大连 · 6月23日</div>
-      </a>
-    </div>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/gn/2026/06-23/10645915.shtml" target="_blank">
-        <span class="tag">外交</span>李强会见蒙古国总理乌其尔勒：构建中蒙命运共同体
-        <div class="news-meta">中新社大连 · 6月23日</div>
-      </a>
-    </div>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/gn/2026/06-23/10645914.shtml" target="_blank">
-        <span class="tag">外交</span>李强会见黑山总理斯帕伊奇：今年是中黑建交20周年
-        <div class="news-meta">中新社大连 · 6月23日</div>
-      </a>
-    </div>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/gn/2026/06-23/10645779.shtml" target="_blank">
-        <span class="tag">外交</span>韩正会见南非副总统马沙蒂莱：深化中南政治互信
-        <div class="news-meta">中新社北京 · 6月23日</div>
-      </a>
-    </div>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/gn/2026/06-23/10645799.shtml" target="_blank">
-        <span class="tag">时政</span>全国政协十四届常委会第十七次会议开幕，丁薛祥作报告
-        <div class="news-meta">中新社北京 · 6月23日</div>
-      </a>
-    </div>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/cj/2026/06-23/10645719.shtml" target="_blank">
-        <span class="tag">政策</span>六部门联合发布意见：推进广告产业高质量发展六大举措
-        <div class="news-meta">中新网 · 6月23日</div>
-      </a>
-    </div>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/cj/2026/06-23/10645625.shtml" target="_blank">
-        <span class="tag">经济</span>中国供应链正成为全球企业"必选项"——跨国公司高管谈中国优势
-        <div class="news-meta">中新社北京 · 6月23日</div>
-      </a>
-    </div>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/cj/2026/06-23/10645647.shtml" target="_blank">
-        <span class="tag">经济</span>中国推动全链条扩大汽车消费：40城入选流通消费改革试点
-        <div class="news-meta">中新社北京 · 6月23日</div>
-      </a>
-    </div>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/cj/2026/06-23/10645605.shtml" target="_blank">
-        <span class="tag">社会</span>中新网评：滴露"物化女性"广告被批，一点都不冤
-        <div class="news-meta">中新网 · 6月23日</div>
-      </a>
-    </div>
+<!-- Section 7: 气象图 -->
+<div class="section weather-imgs">
+  <div class="section-title"><span class="icon">🌤️</span> ECMWF + GFS 气象图</div>
 
-    <h3 style="font-size:15px;color:#1a237e;margin:16px 0 10px;">🌍 国际新闻</h3>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/gn/2026/06-23/10645680.shtml" target="_blank">
-        <span class="tag">国际</span>中方回应英国首相斯塔默宣布辞职：英国内政，不作评论
-        <div class="news-meta">中新网 · 6月23日</div>
-      </a>
-    </div>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/gj/2026/06-23/10646007.shtml" target="_blank">
-        <span class="tag">中东</span>伊朗代表：霍尔木兹海峡已免费开放60天，后续由伊美谈判决定
-        <div class="news-meta">中新网 · 6月23日</div>
-      </a>
-    </div>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/cj/2026/06-23/10646000.shtml" target="_blank">
-        <span class="tag">环境</span>极端高温席卷印度：45-48°C，空调普及率不足10%，进口依赖度高达70%
-        <div class="news-meta">中新网 · 6月23日</div>
-      </a>
-    </div>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/gj/2026/06-23/10646007.shtml" target="_blank">
-        <span class="tag">中东</span>巴基斯坦总理：伊朗将立即重开霍尔木兹海峡
-        <div class="news-meta">中新网 · 6月23日</div>
-      </a>
-    </div>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/gj/2026/06-23/10646007.shtml" target="_blank">
-        <span class="tag">中东</span>伊美在瑞士签署谅解备忘录，建立海峡问题沟通机制
-        <div class="news-meta">中新网 · 6月23日</div>
-      </a>
-    </div>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/gn/2026/06-23/10645680.shtml" target="_blank">
-        <span class="tag">欧洲</span>英国首相斯塔默黯然下台，工党政府面临大选失利
-        <div class="news-meta">综合中新网 · 6月23日</div>
-      </a>
-    </div>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/gj/2026/06-23/10646007.shtml" target="_blank">
-        <span class="tag">中东</span>外媒：以军与黎巴嫩真主党互袭，五名以军士兵受伤
-        <div class="news-meta">中新网 · 6月23日</div>
-      </a>
-    </div>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/gn/2026/06-23/10645928.shtml" target="_blank">
-        <span class="tag">东南亚</span>马来西亚打击签证违规，拘留62名外籍人员
-        <div class="news-meta">中新网 · 6月23日</div>
-      </a>
-    </div>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/cj/2026/06-23/10646000.shtml" target="_blank">
-        <span class="tag">美洲</span>特朗普G7峰会宣告"我是老大"，七国未能达成联合公报
-        <div class="news-meta">综合中新网 · 6月23日</div>
-      </a>
-    </div>
-    <div class="news-item">
-      <a href="https://www.chinanews.com.cn/cj/2026/06-23/10646000.shtml" target="_blank">
-        <span class="tag">体育</span>美加墨世界杯首轮小组赛结束，佛得角队创造奇迹
-        <div class="news-meta">综合中新网 · 6月23日</div>
-      </a>
-    </div>
+  <h3>🇪🇺 ECMWF 欧洲中期天气预报中心</h3>
+  <div class="img-grid">
+    <div class="img-item"><img src="images/ecmwf_500hpa_f000.jpg" alt="ECMWF 500hPa 初始场"><div class="label">500hPa 初始场 (f000)</div></div>
+    <div class="img-item"><img src="images/ecmwf_500hpa_f006.jpg" alt="ECMWF 500hPa +6h"><div class="label">500hPa +6h 预报 (f006)</div></div>
+    <div class="img-item"><img src="images/ecmwf_500hpa_f012.jpg" alt="ECMWF 500hPa +12h"><div class="label">500hPa +12h 预报 (f012)</div></div>
+    <div class="img-item"><img src="images/ecmwf_500hpa_f018.jpg" alt="ECMWF 500hPa +18h"><div class="label">500hPa +18h 预报 (f018)</div></div>
+    <div class="img-item"><img src="images/ecmwf_500hpa_f024.jpg" alt="ECMWF 500hPa +24h"><div class="label">500hPa +24h 预报 (f024)</div></div>
+    <div class="img-item"><img src="images/ecmwf_qinghai_precip_24h.jpg" alt="ECMWF 青海降水"><div class="label">青海省 24h 累计降水</div></div>
   </div>
 
-  <!-- 📝 英文金句 -->
-  <div class="section">
-    <h2>📝 英文金句</h2>
-    <div class="quote-box">
-      <div class="en">"The only way to do great work is to love what you do."</div>
-      <div class="cn">—— 史蒂夫·乔布斯 (Steve Jobs)<br>成就伟业的唯一途径是热爱你所做的事。</div>
-    </div>
+  <h3>🇨🇳 GFS 全球预报系统</h3>
+  <div class="img-grid">
+    <div class="img-item"><img src="images/gfs_500hpa_f000.jpg" alt="GFS 500hPa 初始场"><div class="label">500hPa 初始场 (f000)</div></div>
+    <div class="img-item"><img src="images/gfs_500hpa_f006.jpg" alt="GFS 500hPa +6h"><div class="label">500hPa +6h 预报 (f006)</div></div>
+    <div class="img-item"><img src="images/gfs_500hpa_f012.jpg" alt="GFS 500hPa +12h"><div class="label">500hPa +12h 预报 (f012)</div></div>
+    <div class="img-item"><img src="images/gfs_500hpa_f018.jpg" alt="GFS 500hPa +18h"><div class="label">500hPa +18h 预报 (f018)</div></div>
+    <div class="img-item"><img src="images/gfs_500hpa_f024.jpg" alt="GFS 500hPa +24h"><div class="label">500hPa +24h 预报 (f024)</div></div>
+    <div class="img-item"><img src="images/gfs_qinghai_precip_24h.jpg" alt="GFS 青海降水"><div class="label">青海省 24h 累计降水</div></div>
   </div>
 
-  <!-- 🤔 冷知识一则 -->
-  <div class="section">
-    <h2>🤔 冷知识一则 · 6月24日</h2>
-    <div class="fact-box">
-      <p><strong>📌 历史上的今天——6月24日</strong></p>
-      <p>🔹 <strong>1812年6月24日</strong>——拿破仑率领60万大军渡过涅曼河，入侵俄罗斯。俄法战争爆发。这是欧洲历史上最大规模的军事行动之一。拿破仑最终在俄罗斯严冬和俄军顽强抵抗下遭遇惨败，60万大军仅剩不到3万人生还，从此一蹶不振。</p>
-      <p style="margin-top:8px;">🔹 <strong>1859年6月24日</strong>——意大利独立战争中的索尔费里诺战役爆发。这场惨烈的战役导致约4万人伤亡，促使瑞士商人亨利·杜南创立了国际红十字会。</p>
-      <p style="margin-top:8px;">🔹 <strong>2012年6月24日</strong>——中国"蛟龙"号载人潜水器在西太平洋马里亚纳海沟成功下潜至7020米，创造了世界同类载人潜水器最大下潜深度纪录，标志着中国具备了载人到达全球99.8%以上海底的能力。</p>
-      <p style="margin-top:8px;">🔹 <strong>2016年6月24日</strong>——英国脱欧公投结果公布，51.89%的投票者支持脱离欧盟，引发全球金融市场剧烈震荡。</p>
-    </div>
-  </div>
+  <p style="font-size:12px; color:#999; margin-top:8px;">📌 ECMWF起报时次：2026-06-24 12Z | GFS起报时次：2026-06-24 18Z（北京时2026-06-25 02:00）</p>
+</div>
 
-  <!-- 📚 成语典故 -->
-  <div class="section">
-    <h2>📚 成语典故</h2>
-    <div class="idiom-box">
-      <div class="idiom-title">锲而不舍</div>
-      <div class="idiom-py">qiè ér bù shě</div>
-      <div class="idiom-desc">
-        <p><strong>出处：</strong>《荀子·劝学》——"锲而舍之，朽木不折；锲而不舍，金石可镂。"</p>
-        <p style="margin-top:6px;"><strong>释义：</strong>不停地雕刻。比喻坚持不懈，持之以恒，不达目的不罢休。"锲"意为雕刻；"舍"意为停止。</p>
-        <p style="margin-top:6px;"><strong>典故：</strong>战国时期思想家荀子在《劝学》中用雕刻作比喻：如果雕刻一下就放弃，连腐朽的木头也刻不断；如果持之以恒地雕刻下去，即使是坚硬的金石也能雕刻成功。强调学习与做事贵在坚持。</p>
-        <p style="margin-top:6px;"><strong>近义词：</strong>持之以恒、坚持不懈、坚韧不拔</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- 💰 DeepSeek余额 -->
-  <div class="section">
-    <h2>💰 DeepSeek 余额</h2>
-    <div class="balance-box">
-      <div>
-        <div class="label">剩余额度</div>
-        <div class="amount">¥ 36.00</div>
-      </div>
-      <div style="font-size:13px;color:#555;">
-        ✅ API状态正常<br>
-        充值 36.00 元 | 赠送 0.00 元
-      </div>
-    </div>
-  </div>
-
-  <!-- 🌤️ 气象图板块 -->
-  <div class="section">
-    <h2>🌤️ 气象图分析</h2>
-
-    <div class="model-header">🇪🇺 ECMWF 预报（起报时次: 2026-06-24 00Z）</div>
-    <div class="image-grid">
-      <div>
-        <img src="images/ecmwf_500hpa_f000.jpg" alt="ECMWF 500hPa 初始场" loading="lazy">
-        <div class="image-caption">ECMWF 500hPa 高空图 · 分析场（初始场）</div>
-      </div>
-      <div>
-        <img src="images/ecmwf_500hpa_f006.jpg" alt="ECMWF 500hPa +6h" loading="lazy">
-        <div class="image-caption">ECMWF 500hPa 高空图 · +6h 预报</div>
-      </div>
-      <div>
-        <img src="images/ecmwf_500hpa_f012.jpg" alt="ECMWF 500hPa +12h" loading="lazy">
-        <div class="image-caption">ECMWF 500hPa 高空图 · +12h 预报</div>
-      </div>
-      <div>
-        <img src="images/ecmwf_500hpa_f018.jpg" alt="ECMWF 500hPa +18h" loading="lazy">
-        <div class="image-caption">ECMWF 500hPa 高空图 · +18h 预报</div>
-      </div>
-      <div>
-        <img src="images/ecmwf_500hpa_f024.jpg" alt="ECMWF 500hPa +24h" loading="lazy">
-        <div class="image-caption">ECMWF 500hPa 高空图 · +24h 预报</div>
-      </div>
-      <div>
-        <img src="images/ecmwf_qinghai_precip_24h.jpg" alt="ECMWF 青海降水图" loading="lazy">
-        <div class="image-caption">ECMWF 青海省24h累计降水预报</div>
-      </div>
-    </div>
-
-    <div class="model-header">🇨🇳 GFS 预报（起报时次: 2026-06-23 18Z / 北京时 06-24 02:00）</div>
-    <div class="image-grid">
-      <div>
-        <img src="images/gfs_500hpa_f000.jpg" alt="GFS 500hPa 初始场" loading="lazy">
-        <div class="image-caption">GFS 500hPa 高空图 · 分析场（初始场）</div>
-      </div>
-      <div>
-        <img src="images/gfs_500hpa_f006.jpg" alt="GFS 500hPa +6h" loading="lazy">
-        <div class="image-caption">GFS 500hPa 高空图 · +6h 预报</div>
-      </div>
-      <div>
-        <img src="images/gfs_500hpa_f012.jpg" alt="GFS 500hPa +12h" loading="lazy">
-        <div class="image-caption">GFS 500hPa 高空图 · +12h 预报</div>
-      </div>
-      <div>
-        <img src="images/gfs_500hpa_f018.jpg" alt="GFS 500hPa +18h" loading="lazy">
-        <div class="image-caption">GFS 500hPa 高空图 · +18h 预报</div>
-      </div>
-      <div>
-        <img src="images/gfs_500hpa_f024.jpg" alt="GFS 500hPa +24h" loading="lazy">
-        <div class="image-caption">GFS 500hPa 高空图 · +24h 预报</div>
-      </div>
-      <div>
-        <img src="images/gfs_qinghai_precip_24h.jpg" alt="GFS 青海降水图" loading="lazy">
-        <div class="image-caption">GFS 青海省24h累计降水预报（降水中心 102.0°E, 33.2°N, 38.4mm）</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer">
-    <p>📡 数据来源：中国新闻网 (chinanews.com.cn) · 欧洲中期天气预报中心 (ECMWF) · 美国全球预报系统 (GFS)</p>
-    <p>🤖 由 Hermes Agent 自动生成 · 2026年6月24日 06:10 CST</p>
-    <p><a href="/">← 返回首页</a></p>
-  </div>
+<div class="footer">
+  <p>📡 数据来源：ECMWF Open Data · GFS 0.25° · 中国新闻网</p>
+  <p>🤖 Generated by Hermes Agent · 2026-06-25 06:10 CST</p>
+</div>
 
 </div>
+
+<a href="#" class="back-top">↑</a>
+
 </body>
 </html>
