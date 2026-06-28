@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hermes 气象日报 | 2026年6月28日</title>
+<title>Hermes 气象日报 | 2026年6月29日</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans SC",sans-serif;background:#f0f2f5;color:#333;line-height:1.8}
@@ -20,6 +20,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
 .news-item:last-child{border-bottom:none}
 .news-link{color:#1565c0;text-decoration:none;font-size:15px;line-height:1.6;display:block;transition:color .2s}
 .news-link:hover{color:#0d47a1;text-decoration:underline}
+.news-tag{display:inline-block;background:#e8eaf6;color:#1a237e;padding:1px 8px;border-radius:10px;font-size:11px;margin-right:6px}
 .weather-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .weather-card{background:#e8eaf6;border-radius:10px;padding:16px;text-align:center}
 .weather-card .label{font-size:13px;color:#666;margin-bottom:4px}
@@ -38,6 +39,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
 .balance-box{background:linear-gradient(135deg,#1a237e,#3949ab);border-radius:12px;padding:20px;text-align:center;color:#fff}
 .balance-box .amount{font-size:36px;font-weight:700;margin:8px 0}
 .balance-box .status{font-size:14px;opacity:.85}
+.balance-box .sub{font-size:12px;opacity:.7;margin-top:4px}
 .img-grid{display:grid;grid-template-columns:1fr;gap:16px}
 .img-grid .model-group{margin-bottom:16px}
 .img-grid .model-group h3{font-size:17px;color:#1a237e;margin-bottom:10px;padding:8px 14px;background:#e8eaf6;border-radius:8px}
@@ -48,6 +50,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
 .subtitle{font-size:12px;color:#999;text-align:center;margin-top:8px}
 .footer{text-align:center;padding:20px;color:#999;font-size:13px}
 .tag{display:inline-block;background:#e8eaf6;color:#1a237e;padding:2px 10px;border-radius:12px;font-size:12px;margin-right:6px;margin-bottom:4px}
+.idiom-box{background:linear-gradient(135deg,#fff8e1,#fff3e0);border-radius:12px;padding:20px;margin:10px 0}
+.idiom-box .idiom-word{font-size:28px;color:#e65100;font-weight:700;text-align:center;margin-bottom:8px;letter-spacing:4px}
+.idiom-box .pinyin{font-size:14px;color:#888;text-align:center;margin-bottom:12px}
+.idiom-box .meaning{font-size:14px;color:#444;line-height:1.8}
+.idiom-box .story{font-size:14px;color:#555;line-height:1.8;margin-top:10px;padding:12px;background:rgba(255,255,255,.6);border-radius:8px}
 @media(max-width:600px){.weather-grid,.img-grid .img-row{grid-template-columns:1fr}.container{padding:12px}.header{padding:20px}.header h1{font-size:22px}}
 </style>
 </head>
@@ -58,180 +65,143 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
 <div class="header">
 <a href="/" class="back-btn">← 返回首页</a>
 <h1>🌤 Hermes 气象日报</h1>
-<div class="date">📅 2026年6月28日 · 星期日 · 农历五月十四</div>
+<div class="date">📅 2026年6月29日 · 星期一 · 农历五月十五</div>
 </div>
 
-<!-- 每日天气 -->
+<!-- 📅 每日天气 -->
 <div class="section">
 <h2><span class="emoji">📅</span> 每日天气 · 青海西宁</h2>
 <div class="weather-grid">
-<div class="weather-card"><div class="label">🌡 气温</div><div class="value">13~27°C</div></div>
-<div class="weather-card"><div class="label">☁ 天气</div><div class="value">多云转晴</div></div>
-<div class="weather-card"><div class="label">💨 风力</div><div class="value">东南风 3-4级</div></div>
-<div class="weather-card"><div class="label">💧 湿度</div><div class="value">45%~65%</div></div>
+<div class="weather-card"><div class="label">🌡 气温</div><div class="value">12~25°C</div></div>
+<div class="weather-card"><div class="label">☁ 天气</div><div class="value">雷阵雨转多云</div></div>
+<div class="weather-card"><div class="label">💨 风力</div><div class="value">西北风 3-4级</div></div>
+<div class="weather-card"><div class="label">💧 湿度</div><div class="value">50%~80%</div></div>
 </div>
 <div class="weather-desc">
-🌤 西宁今日多云转晴，午后体感舒适，适合户外活动。<br>
-🏔 青海全省：玉树、果洛南部及青海东南部有中雨，局地大雨；其余地区多云或晴。<br>
-⚠ 青南地区需防范局地强降雨可能引发的山洪、滑坡等次生灾害。
+🌤 西宁今日白天有雷阵雨，夜间转多云，气温舒适，出门请携带雨具。<br>
+🏔 青海全省：玉树、果洛南部及青海湖以东地区有中雨，局地大雨；青南地区需防范雷电。<br>
+⚠ 青南及祁连山区需防范局地强对流天气及可能引发的山洪、滑坡等次生灾害。
 </div>
 </div>
 
-<!-- 最新要闻 -->
+<!-- 📰 最新要闻 -->
 <div class="section">
 <h2><span class="emoji">📰</span> 最新要闻</h2>
 
-<h3 style="color:#1a237e;font-size:16px;margin:8px 0 6px">🇨🇳 国内新闻</h3>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-27/10648616.shtml" target="_blank">🤝 一个月内三位东盟国家重要领导人访华，他们为何都看向中国？</a></div>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-27/10648495.shtml" target="_blank">🌏 洪森再访华，中柬合作释放新信号——建立安全伙伴关系</a></div>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-27/10648558.shtml" target="_blank">✈ 中俄两军组织实施第11次联合空中战略巡航</a></div>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-27/10648261.shtml" target="_blank">📊 1-5月全国规模以上工业企业利润增长18.8%，5月增长21.1%</a></div>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-27/10648348.shtml" target="_blank">🚄 我国首条民营控股高铁累计客流突破1亿人次</a></div>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-27/10648350.shtml" target="_blank">📝 习言道｜习近平再次强调这条红线</a></div>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-27/10648223.shtml" target="_blank">🌧 华南云南等地仍有较强降雨，青海东南部有中雨</a></div>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-27/10648235.shtml" target="_blank">☀️ 北方高温周末将成片发展，南方主雨带逐渐北抬</a></div>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-26/10647529.shtml" target="_blank">🏘 "七一"前夕，习近平为何考察一个村级党组织</a></div>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-27/10648495.shtml" target="_blank">🛡 中柬将建立安全伙伴关系，彻底铲除电诈"毒瘤"</a></div>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-26/10647731.shtml" target="_blank">🔗 四赴链博会！沃尔沃汽车发布整车全生命周期碳中和报告</a></div>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-27/10648305.shtml" target="_blank">⚠️ 警惕"生长发育补贴"套路，已有家长中招！</a></div>
+<h3 style="font-size:16px;color:#1a237e;margin:12px 0 8px;padding-left:4px;border-left:3px solid #1a237e;padding-left:10px;">🇨🇳 国内</h3>
+<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-28/10648942.shtml" target="_blank"><span class="news-tag">时政</span>习近平强党兴党的故事｜"清理公房"启清风</a></div>
+<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-28/10648938.shtml" target="_blank"><span class="news-tag">时政</span>天天学习｜跨越山海的睦邻故事</a></div>
+<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-28/10648935.shtml" target="_blank"><span class="news-tag">时政</span>学习进行时｜习近平总书记关心指导基层党建的故事</a></div>
+<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-27/10648350.shtml" target="_blank"><span class="news-tag">时政</span>习言道｜习近平再次强调这条红线</a></div>
+<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-28/10648839.shtml" target="_blank"><span class="news-tag">两岸</span>首次踏足孙中山故里 台青感慨万千：国家统一大势不可逆转</a></div>
+<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gn/2026/06-28/10648796.shtml" target="_blank"><span class="news-tag">军事</span>专家：美军在南海"自己加戏"有违中美关系发展大方向</a></div>
+<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/ll/2026/06-28/10648801.shtml" target="_blank"><span class="news-tag">评论</span>持续用力，推动学习教育走深走实（树立和践行正确政绩观）</a></div>
+<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/sh/2026/06-28/10648672.shtml" target="_blank"><span class="news-tag">民生</span>与你我有关！下月起，这些新规将施行</a></div>
+<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/cj/2026/06-28/10648689.shtml" target="_blank"><span class="news-tag">财经</span>（活力中国调研行）从螺丝钉到重卡 河北工业品"云端"销售"卖全球"</a></div>
+<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/dwq/2026/06-28/10648750.shtml" target="_blank"><span class="news-tag">港澳</span>（洋话香江）专访香港加拿大商会主席谭建中："香港的独特性难以复制"</a></div>
 
-<h3 style="color:#1a237e;font-size:16px;margin:16px 0 6px">🌍 国际新闻</h3>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-27/10648249.shtml" target="_blank">🔴 委内瑞拉强震遇难人数升至920人，7名中国公民遇难</a></div>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-27/10648304.shtml" target="_blank">💰 特朗普威胁对欧洲国家征收100%报复性关税</a></div>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-27/10648548.shtml" target="_blank">🛡 伊朗外交部：美军违反伊美谅解备忘录，已实施防御性打击</a></div>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-27/10648218.shtml" target="_blank">🌐 外国参展商齐聚链博会"挖宝"：中国已成全球创新源泉</a></div>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-27/10648212.shtml" target="_blank">🇻🇪 委内瑞拉强震逾5.3万人下落不明，欧盟派遣救援队</a></div>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-27/10648300.shtml" target="_blank">🇺🇸 万斯威胁：将对欧洲采取更严厉措施</a></div>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-27/10648314.shtml" target="_blank">⚡ 如何回答全球能源危机之问？中国在这场论坛表现获好评</a></div>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-27/10648547.shtml" target="_blank">🇮🇳 鲁比奥：特朗普可能于2027年年初访问印度</a></div>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/ty/2026/06-27/10648407.shtml" target="_blank">⚽ 世界杯迎小组赛收官日：淘汰赛最后四席将从八队中产生</a></div>
-<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-27/10648214.shtml" target="_blank">🇪🇺 欧盟派遣救援队赴委内瑞拉地震灾区赈灾</a></div>
+<h3 style="font-size:16px;color:#1a237e;margin:16px 0 8px;padding-left:4px;border-left:3px solid #e65100;padding-left:10px;">🌍 国际</h3>
+<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-28/10648818.shtml" target="_blank"><span class="news-tag">欧洲</span>欧洲热浪肆虐，捷克、瑞士、法国、丹麦等国刷新高温纪录</a></div>
+<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-28/10648707.shtml" target="_blank"><span class="news-tag">南美</span>委内瑞拉地震死亡人数升至1430人 8名中国公民遇难</a></div>
+<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-28/10648669.shtml" target="_blank"><span class="news-tag">中东</span>美伊形势突变！特朗普发帖威胁：伊朗或将不复存在</a></div>
+<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-28/10648706.shtml" target="_blank"><span class="news-tag">欧洲</span>法国东部多地气温突破40摄氏度 全法74人溺水丧生</a></div>
+<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-27/10648396.shtml" target="_blank"><span class="news-tag">版权</span>美国查封近400个盗播世界杯赛事域名</a></div>
+<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-26/10647786.shtml" target="_blank"><span class="news-tag">经济</span>外媒聚焦2026夏季达沃斯论坛：感受中国创新，触摸未来脉搏</a></div>
+<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-26/10647713.shtml" target="_blank"><span class="news-tag">俄乌</span>俄罗斯称一夜之间击落660架乌克兰无人机</a></div>
+<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-26/10647507.shtml" target="_blank"><span class="news-tag">南美</span>巴西向委内瑞拉派遣人道主义救援队</a></div>
+<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-25/10646797.shtml" target="_blank"><span class="news-tag">南美</span>委内瑞拉连续发生7级以上强震：建筑物倒塌多地有震感</a></div>
+<div class="news-item"><a class="news-link" href="https://www.chinanews.com.cn/gj/2026/06-28/10648680.shtml" target="_blank"><span class="news-tag">欧洲</span>伦敦发生疑似蓄意驾车撞人事件 已致5人受伤</a></div>
 </div>
 
-<!-- 英文金句 -->
+<!-- 📝 英文金句 -->
 <div class="section">
-<h2><span class="emoji">📝</span> 英文金句</h2>
+<h2><span class="emoji">📝</span> 每日金句</h2>
 <div class="quote-box">
-<div class="en">"The only limit to our realization of tomorrow will be our doubts of today."</div>
-<div class="cn">—— 实现明天理想的唯一障碍是今天的疑虑。</div>
-<div class="author">— Franklin D. Roosevelt</div>
+<div class="en">"The only way to do great work is to love what you do."</div>
+<div class="cn">成就伟业的唯一途径是热爱你所做的事。</div>
+<div class="author">—— Steve Jobs · 2005年斯坦福大学毕业演讲</div>
 </div>
 </div>
 
-<!-- 每日一笑 -->
+<!-- 🎬 经典台词 -->
 <div class="section">
-<h2><span class="emoji">😄</span> 每日一笑</h2>
-<div class="joke-item">做为老师，这次考试学生的成绩很让我捉急啊，上课时我问：你们考成这样是要气死我的节奏么？有个学生答：不是节奏，是前奏。。。</div>
-<div class="joke-item">老师问，谁能把"燕雀安知鸿鹄之志"翻译成现代文？二货答："哥的世界你不懂！"</div>
-<div class="joke-item">回老家想吃老妈做的鱼，我哥说带我去弄点新鲜鱼。开车到运河边，找到钓鱼的，我哥过去交谈了会儿，提着水桶回来。我问老哥：你这是找他们买的？怎么桶都送你了！老哥摇摇头解释：我蒙来的，告诉他们这不能钓鱼，顺手把鱼给没收了…</div>
-<div class="joke-item">下班后打通房产中介的电话说要租房子，让他带我看看。一会儿功夫他骑着电动车过来，坐上之后很快到了我指定的小区。简单看了几间，房子特棒但价格略高，礼貌地说完抱歉下楼了。在小区花园长椅坐下，不禁感慨：真好呀。。。下次没钱打车还这么干！</div>
+<h2><span class="emoji">🎬</span> 经典台词</h2>
+<div class="joke-item">「我们最接近的时候，我和她之间的距离只有0.01公分。」</div>
+<div style="text-align:right;font-size:13px;color:#888;margin-top:4px;">—— 《重庆森林》（1994）</div>
 </div>
 
-<!-- 成语典故 -->
+<!-- 📚 成语典故 -->
 <div class="section">
 <h2><span class="emoji">📚</span> 成语典故</h2>
-<div class="cy-item">
-<span class="term">📖 鹏程万里</span> — <span class="source">《庄子·逍遥游》</span>
-<p style="margin-top:6px;color:#555;font-size:14px;line-height:1.7">
-传说北海有一种名为"鲲"的大鱼，化作大鸟名为"鹏"。大鹏鸟翅膀拍击水面三千里，乘着旋风飞上九万里高空，前往南方的天池。后人用"鹏程万里"比喻前程远大，不可限量。今日高考放榜季，愿所有学子如大鹏展翅，扶摇直上九万里！
-</p>
+<div class="idiom-box">
+<div class="idiom-word">画龙点睛</div>
+<div class="pinyin">huà lóng diǎn jīng</div>
+<div class="meaning"><strong>释义：</strong>比喻在关键的地方用精辟的词句点明要旨，使内容更加生动有力。</div>
+<div class="story">
+📖 <strong>典故：</strong>南北朝时期，画家张僧繇在安乐寺的墙壁上画了四条龙，形态逼真，但都没有画眼睛。人们问他为何不画眼睛，他说："画上眼睛，龙就会飞走。"大家不信，非要他画上。张僧繇只好提笔为两条龙点上眼睛。霎时间，电闪雷鸣，两条龙破壁腾空而去。众人惊叹不已。"画龙点睛"由此而来，比喻说话或写文章时，在关键处用几个精彩语句点明主旨，使内容更加传神。
+</div>
 </div>
 </div>
 
-<!-- DeepSeek余额 -->
+<!-- 💰 DeepSeek余额 -->
 <div class="section">
 <h2><span class="emoji">💰</span> DeepSeek API 余额</h2>
 <div class="balance-box">
-<div style="font-size:14px;opacity:.85;margin-bottom:4px">当前余额</div>
-<div class="amount">¥28.30</div>
-<div class="status">✅ 状态正常 · 充值 28.30 元</div>
+<div class="status">💳 当前余额</div>
+<div class="amount">¥27.14</div>
+<div class="status">✅ 可用状态 · CogView-3-Flash 免费画图正常</div>
+<div class="sub">数据更新：2026年6月29日 06:10</div>
 </div>
 </div>
 
-<!-- 气象图 -->
+<!-- 🌤️ 气象预报总览 -->
 <div class="section">
-<h2><span class="emoji">🌤️</span> 气象数值预报 · 2026年6月28日</h2>
-
+<h2><span class="emoji">🌤️</span> 气象预报总览</h2>
 <div class="img-grid">
 
-<!-- ECMWF Group -->
+<!-- 🇪🇺 ECMWF 6张在前 -->
 <div class="model-group">
-<h3>🇪🇺 ECMWF（欧洲中期天气预报中心）500hPa 高空形势 & 青海降水</h3>
+<h3>🇪🇺 ECMWF 500hPa 高空形势场 · 起报 2026-06-28 12Z</h3>
 <div class="img-row">
-<div>
-<img src="images/ecmwf_500hpa_f000.jpg" alt="ECMWF 500hPa 初始场" loading="lazy">
-<div class="img-caption">初始场（00Z）</div>
+<div><img src="images/ecmwf_500hpa_f000.jpg" alt="ECMWF 500hPa 初始场"><div class="img-caption">分析场（初始场）</div></div>
+<div><img src="images/ecmwf_500hpa_f006.jpg" alt="ECMWF 500hPa +6h"><div class="img-caption">+6h 预报场</div></div>
 </div>
-<div>
-<img src="images/ecmwf_500hpa_f006.jpg" alt="ECMWF 500hPa +6h" loading="lazy">
-<div class="img-caption">+6h 预报</div>
+<div class="img-row">
+<div><img src="images/ecmwf_500hpa_f012.jpg" alt="ECMWF 500hPa +12h"><div class="img-caption">+12h 预报场</div></div>
+<div><img src="images/ecmwf_500hpa_f018.jpg" alt="ECMWF 500hPa +18h"><div class="img-caption">+18h 预报场</div></div>
 </div>
-</div>
-<div class="img-row" style="margin-top:10px">
-<div>
-<img src="images/ecmwf_500hpa_f012.jpg" alt="ECMWF 500hPa +12h" loading="lazy">
-<div class="img-caption">+12h 预报</div>
-</div>
-<div>
-<img src="images/ecmwf_500hpa_f018.jpg" alt="ECMWF 500hPa +18h" loading="lazy">
-<div class="img-caption">+18h 预报</div>
-</div>
-</div>
-<div class="img-row" style="margin-top:10px">
-<div>
-<img src="images/ecmwf_500hpa_f024.jpg" alt="ECMWF 500hPa +24h" loading="lazy">
-<div class="img-caption">+24h 预报</div>
-</div>
-<div>
-<img src="images/ecmwf_qinghai_precip_24h.jpg" alt="ECMWF 青海24h降水" loading="lazy">
-<div class="img-caption">青海 24h 降水预报</div>
-</div>
+<div class="img-row">
+<div><img src="images/ecmwf_500hpa_f024.jpg" alt="ECMWF 500hPa +24h"><div class="img-caption">+24h 预报场</div></div>
+<div><img src="images/ecmwf_qinghai_precip_24h.jpg" alt="ECMWF 青海降水"><div class="img-caption">青海省24h累计降水</div></div>
 </div>
 </div>
 
-<!-- GFS Group -->
+<!-- 🇨🇳 GFS 6张在后 -->
 <div class="model-group">
-<h3>🇨🇳 GFS（美国全球预报系统）500hPa 高空形势 & 青海降水</h3>
+<h3>🇨🇳 GFS 500hPa 高空形势场 · 起报 2026-06-28 18Z</h3>
 <div class="img-row">
-<div>
-<img src="images/gfs_500hpa_f000.jpg" alt="GFS 500hPa 初始场" loading="lazy">
-<div class="img-caption">初始场（00Z）</div>
+<div><img src="images/gfs_500hpa_f000.jpg" alt="GFS 500hPa 初始场"><div class="img-caption">分析场（初始场）</div></div>
+<div><img src="images/gfs_500hpa_f006.jpg" alt="GFS 500hPa +6h"><div class="img-caption">+6h 预报场</div></div>
 </div>
-<div>
-<img src="images/gfs_500hpa_f006.jpg" alt="GFS 500hPa +6h" loading="lazy">
-<div class="img-caption">+6h 预报</div>
+<div class="img-row">
+<div><img src="images/gfs_500hpa_f012.jpg" alt="GFS 500hPa +12h"><div class="img-caption">+12h 预报场</div></div>
+<div><img src="images/gfs_500hpa_f018.jpg" alt="GFS 500hPa +18h"><div class="img-caption">+18h 预报场</div></div>
 </div>
-</div>
-<div class="img-row" style="margin-top:10px">
-<div>
-<img src="images/gfs_500hpa_f012.jpg" alt="GFS 500hPa +12h" loading="lazy">
-<div class="img-caption">+12h 预报</div>
-</div>
-<div>
-<img src="images/gfs_500hpa_f018.jpg" alt="GFS 500hPa +18h" loading="lazy">
-<div class="img-caption">+18h 预报</div>
-</div>
-</div>
-<div class="img-row" style="margin-top:10px">
-<div>
-<img src="images/gfs_500hpa_f024.jpg" alt="GFS 500hPa +24h" loading="lazy">
-<div class="img-caption">+24h 预报</div>
-</div>
-<div>
-<img src="images/gfs_qinghai_precip_24h.jpg" alt="GFS 青海24h降水" loading="lazy">
-<div class="img-caption">青海 24h 降水预报</div>
-</div>
+<div class="img-row">
+<div><img src="images/gfs_500hpa_f024.jpg" alt="GFS 500hPa +24h"><div class="img-caption">+24h 预报场</div></div>
+<div><img src="images/gfs_qinghai_precip_24h.jpg" alt="GFS 青海降水"><div class="img-caption">青海省24h累计降水</div></div>
 </div>
 </div>
 
 </div>
-<div class="subtitle">数据来源：ECMWF（欧洲中心）· GFS（NCEP/NOAA）· 起报时次 00Z</div>
+<div class="subtitle">📌 说明：黑色等高线=500hPa位势高度，蓝色粗线=588线，红色线=温度，蓝色风羽=风场，绿色填色=700hPa相对湿度≥60%</div>
 </div>
 
 <!-- Footer -->
 <div class="footer">
-<p>🤖 由 Hermes Agent 自动生成 · 每日 06:10 更新</p>
-<p>📧 contact@nousresearch.com</p>
+<p>🤖 Hermes 气象日报 · 每日清晨自动生成</p>
+<p>📡 数据来源：ECMWF Open Data · GFS 0.25° · 中国天气网 · 中国新闻网</p>
+<p>📅 2026-06-29 · 第20260629期</p>
 </div>
 
 </div>
