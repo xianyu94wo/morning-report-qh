@@ -3,394 +3,646 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>每日晨报 - 2026年7月6日</title>
+    <title>🌤️ Hermes气象日报 | 2026-07-07</title>
     <style>
-        :root { --primary: #1a237e; --primary-light: #283593; --accent: #3949ab; --text: #333; --text-light: #666; --bg: #f5f5f5; --card-bg: #fff; --border: #e0e0e0; --red: #c62828; --blue: #1565c0; }
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
-        .header { background:linear-gradient(135deg,var(--primary),var(--primary-light)); color:#fff; padding:20px; text-align:center; }
-        .header-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
-        .back-btn { color:#fff; text-decoration:none; background:rgba(255,255,255,.2); padding:6px 16px; border-radius:20px; font-size:14px; }
-        .back-btn:hover { background:rgba(255,255,255,.3); }
-        .header h1 { font-size:24px; font-weight:600; margin-bottom:5px; }
-        .header .subtitle { font-size:14px; opacity:.8; }
-        .container { max-width:800px; margin:0 auto; padding:15px; }
-        .section { background:var(--card-bg); border-radius:12px; padding:20px; margin-bottom:15px; box-shadow:0 2px 8px rgba(0,0,0,.06); }
-        .section-title { font-size:18px; font-weight:600; color:var(--primary); padding-bottom:10px; margin-bottom:15px; border-bottom:3px solid var(--accent); }
-        .weather-main { text-align:center; padding:20px 0; }
-        .weather-main .city { font-size:22px; font-weight:600; color:var(--primary); margin-bottom:5px; }
-        .weather-main .date { font-size:14px; color:var(--text-light); margin-bottom:15px; }
-        .weather-main .temp { font-size:48px; font-weight:300; }
-        .weather-main .temp .unit { font-size:24px; color:var(--text-light); }
-        .weather-main .desc { font-size:18px; color:var(--text-light); margin-top:10px; }
-        .weather-main .wind { font-size:14px; color:var(--text-light); margin-top:5px; }
-        .weather-forecast { display:flex; justify-content:space-around; margin-top:20px; padding-top:15px; border-top:1px solid var(--border); }
-        .forecast-item { text-align:center; }
-        .forecast-item .day { font-size:12px; color:var(--text-light); }
-        .forecast-item .weather { font-size:14px; margin:5px 0; }
-        .forecast-item .temp-range { font-size:13px; color:var(--text-light); }
-        .weather-tip { background:#e8f5e9; border-radius:8px; padding:12px 15px; margin-top:15px; font-size:13px; color:#2e7d32; }
-        .news-card { border-left:4px solid var(--accent); padding-left:15px; margin-bottom:20px; }
-        .news-card.domestic { border-left-color:var(--red); }
-        .news-card.international { border-left-color:var(--blue); }
-        .news-card h3 { font-size:15px; color:var(--primary); margin-bottom:10px; }
-        .news-list { list-style:none; }
-        .news-list li { display:flex; align-items:flex-start; padding:8px 0; border-bottom:1px solid #f0f0f0; }
-        .news-list li:last-child { border-bottom:none; }
-        .news-index { background:var(--accent); color:#fff; width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:600; flex-shrink:0; margin-right:10px; margin-top:2px; }
-        .news-content { flex:1; }
-        .news-link { color:var(--text); text-decoration:none; font-size:14px; line-height:1.5; }
-        .news-link:hover { color:var(--accent); }
-        .news-source { display:inline-block; font-size:11px; color:var(--text-light); background:var(--bg); padding:2px 8px; border-radius:10px; margin-top:4px; }
-        .feature-card { background:#fafafa; border-radius:10px; padding:20px; margin-bottom:15px; }
-        .en-quote { font-style:italic; font-size:16px; border-left:3px solid var(--accent); padding-left:15px; margin-bottom:10px; line-height:1.6; }
-        .zh-quote { font-size:14px; color:var(--text-light); margin-bottom:8px; }
-        .quote-source { font-size:12px; color:var(--text-light); text-align:right; }
-        .joke-item { background:#fafafa; border-radius:8px; padding:15px; margin-bottom:10px; font-size:14px; line-height:1.6; border-left:3px solid #ff9800; }
-        .idiom-title { font-size:24px; font-weight:700; color:var(--primary); text-align:center; margin-bottom:10px; }
-        .idiom-source { text-align:center; font-size:13px; color:var(--text-light); margin-bottom:15px; }
-        .idiom-story { font-size:14px; line-height:1.8; margin-bottom:15px; text-indent:2em; }
-        .idiom-meaning { background:#e3f2fd; border-radius:8px; padding:12px 15px; font-size:13px; color:#1565c0; }
-        .api-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px; }
-        .api-card { background:#fafafa; border-radius:10px; padding:15px; text-align:center; }
-        .api-name { font-size:12px; color:var(--text-light); margin-bottom:5px; }
-        .api-value { font-size:20px; font-weight:600; color:var(--primary); }
-        .api-status { display:inline-block; font-size:11px; padding:2px 8px; border-radius:10px; margin-top:5px; }
-        .status-ok { background:#e8f5e9; color:#2e7d32; }
-        .image-gallery { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:15px; }
-        .weather-card { border-radius:10px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.1); }
-        .weather-card img { width:100%; height:auto; display:block; }
-        .weather-label { text-align:center; padding:8px; font-size:12px; color:var(--text-light); background:#fafafa; }
-        .gallery-subtitle { font-size:14px; color:var(--text-light); margin:15px 0 10px; padding-left:10px; border-left:3px solid var(--accent); }
-        @media(prefers-color-scheme:dark){ :root{--text:#e0e0e0;--text-light:#aaa;--bg:#121212;--card-bg:#1e1e1e;--border:#333} .news-link{color:#e0e0e0} .feature-card,.joke-item,.api-card,.weather-label{background:#252525} }
-        .footer { text-align:center; padding:20px; font-size:12px; color:var(--text-light); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #3949ab 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .header .date {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        .back-btn {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 12px;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+        .back-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .section-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e8eaf6;
+        }
+        /* Weather Section */
+        .weather-main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-radius: 12px;
+        }
+        .weather-icon {
+            font-size: 64px;
+        }
+        .weather-info {
+            text-align: center;
+        }
+        .weather-info .city {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a237e;
+        }
+        .weather-info .temp {
+            font-size: 42px;
+            font-weight: bold;
+            color: #e65100;
+            margin: 5px 0;
+        }
+        .weather-info .desc {
+            font-size: 18px;
+            color: #555;
+        }
+        .weather-info .wind {
+            font-size: 14px;
+            color: #777;
+            margin-top: 5px;
+        }
+        .forecast-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .forecast-table th {
+            background: #e8eaf6;
+            padding: 10px;
+            text-align: center;
+            font-size: 13px;
+            color: #1a237e;
+        }
+        .forecast-table td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            font-size: 13px;
+        }
+        .forecast-table tr:hover {
+            background: #f5f5f5;
+        }
+        .weather-tip {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 12px 16px;
+            margin-top: 15px;
+            border-radius: 0 8px 8px 0;
+            font-size: 14px;
+            color: #e65100;
+        }
+        /* News Section */
+        .news-category {
+            font-size: 18px;
+            font-weight: bold;
+            color: #283593;
+            margin: 16px 0 10px 0;
+            padding-left: 10px;
+            border-left: 3px solid #1a237e;
+        }
+        .news-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-link {
+            color: #1a237e;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .news-link:hover {
+            color: #3949ab;
+            text-decoration: underline;
+        }
+        .news-source {
+            display: inline-block;
+            font-size: 12px;
+            color: #999;
+            margin-left: 8px;
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        .news-desc {
+            font-size: 13px;
+            color: #666;
+            margin-top: 4px;
+            line-height: 1.5;
+        }
+        /* Quote Section */
+        .quote-box {
+            background: linear-gradient(135deg, #f3e5f5 0%, #e8eaf6 100%);
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 10px 0;
+        }
+        .quote-en {
+            font-size: 20px;
+            font-style: italic;
+            color: #4a148c;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        .quote-cn {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .quote-author {
+            font-size: 14px;
+            color: #666;
+        }
+        /* Joke Section */
+        .joke-item {
+            padding: 12px 16px;
+            margin: 10px 0;
+            background: #fafafa;
+            border-radius: 8px;
+            font-size: 15px;
+            line-height: 1.6;
+            border-left: 3px solid #7c4dff;
+        }
+        /* Dictionary Section */
+        .idiom-box {
+            background: #fff8e1;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 10px 0;
+        }
+        .idiom-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e65100;
+            margin-bottom: 10px;
+        }
+        .idiom-source {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .idiom-story {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .idiom-meaning {
+            font-size: 14px;
+            color: #555;
+            background: white;
+            padding: 10px;
+            border-radius: 6px;
+        }
+        /* API Status */
+        .api-status {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .api-card {
+            flex: 1;
+            min-width: 200px;
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .api-card.deepseek {
+            background: #e8f5e9;
+            border: 1px solid #a5d6a7;
+        }
+        .api-card.zhipu {
+            background: #e3f2fd;
+            border: 1px solid #90caf9;
+        }
+        .api-card .name {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .api-card .balance {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+        .api-card .status {
+            font-size: 12px;
+            color: #4caf50;
+            margin-top: 5px;
+        }
+        /* Image Gallery */
+        .gallery-section {
+            margin-top: 10px;
+        }
+        .gallery-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1a237e;
+            margin: 15px 0 10px 0;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .gallery-item .caption {
+            padding: 8px;
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+            background: white;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #999;
+            font-size: 13px;
+        }
+        @media (max-width: 600px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            .weather-main {
+                flex-direction: column;
+            }
+            .header h1 {
+                font-size: 22px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="header-top">
-            <a href="/" class="back-btn">← 返回首页</a>
-            <span style="font-size:13px;opacity:.8;">2026年7月6日</span>
-        </div>
-        <h1>🌤 每日晨报</h1>
-        <div class="subtitle">天气 · 要闻 · 金句 · 典故 · 预报图集</div>
+        <a href="/" class="back-btn">← 返回首页</a>
+        <h1>🌤️ Hermes 气象日报</h1>
+        <div class="date">2026年7月7日 星期二 · AI 自动生成</div>
     </div>
+
     <div class="container">
+        <!-- ===== 📅 每日天气 ===== -->
         <div class="section">
-            <h2 class="section-title">📅 每日天气</h2>
+            <div class="section-title">📅 每日天气</div>
             <div class="weather-main">
-                <div class="city">西宁 · 7月6日 星期一</div>
-                <div class="date">2026年7月6日</div>
-                <div class="temp">32°<span class="unit">/ 13°</span></div>
-                <div class="desc">阴转晴</div>
-                <div class="wind">微风</div>
-                <div class="weather-forecast">
-                    <div class="forecast-item">
-                        <div class="day">7月7日</div>
-                        <div class="weather">晴</div>
-                        <div class="temp-range">14°~33°</div>
-                    </div>
-                    <div class="forecast-item">
-                        <div class="day">7月8日</div>
-                        <div class="weather">多云转阴</div>
-                        <div class="temp-range">16°~31°</div>
-                    </div>
-                    <div class="forecast-item">
-                        <div class="day">7月9日</div>
-                        <div class="weather">阴转小雨</div>
-                        <div class="temp-range">17°~30°</div>
-                    </div>
-
+                <div class="weather-icon">⛅</div>
+                <div class="weather-info">
+                    <div class="city">西宁 · 7月7日 星期二</div>
+                    <div class="temp">14~32℃</div>
+                    <div class="desc">多云转晴</div>
+                    <div class="wind">🌬️ 无持续风向 <3级</div>
                 </div>
-                <div class="weather-tip">
-                    💡 今日天气阴转晴，最高气温32°C，最低13°C。白天紫外线较强，外出请注意防晒；昼夜温差较大，早晚外出建议携带薄外套。
+            </div>
+
+            <table class="forecast-table">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>天气</th>
+                        <th>气温</th>
+                        <th>风力</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>7日（今天）</td>
+                        <td>⛅ 多云转晴</td>
+                        <td>14~32℃</td>
+                        <td>&lt;3级</td>
+                    </tr>
+                    <tr>
+                        <td>8日（明天）</td>
+                        <td>🌥️ 多云转阴</td>
+                        <td>14~33℃</td>
+                        <td>&lt;3级</td>
+                    </tr>
+                    <tr>
+                        <td>9日（后天）</td>
+                        <td>🌧️ 小雨转阴</td>
+                        <td>12~28℃</td>
+                        <td>&lt;3级</td>
+                    </tr>
+                    <tr>
+                        <td>10日（周五）</td>
+                        <td>🌧️ 中雨</td>
+                        <td>14~28℃</td>
+                        <td>&lt;3级</td>
+                    </tr>
+                    <tr>
+                        <td>11日（周六）</td>
+                        <td>🌧️ 中雨转小雨</td>
+                        <td>12~19℃</td>
+                        <td>&lt;3级</td>
+                    </tr>
+                    <tr>
+                        <td>12日（周日）</td>
+                        <td>🌧️ 小雨</td>
+                        <td>14~19℃</td>
+                        <td>&lt;3级</td>
+                    </tr>
+                    <tr>
+                        <td>13日（周一）</td>
+                        <td>☁️ 阴</td>
+                        <td>12~25℃</td>
+                        <td>&lt;3级</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="weather-tip">
+                💡 <strong>温馨提示：</strong>今日西宁天气晴好，最高气温32℃，紫外线较强，外出请注意防晒。明天开始天气转阴，后天起将迎来一轮降水过程，气温明显下降，请提前准备雨具，注意添衣保暖。
+            </div>
+        </div>
+
+        <!-- ===== 📰 最新要闻 ===== -->
+        <div class="section">
+            <div class="section-title">📰 最新要闻</div>
+
+            <div class="news-category">🇨🇳 国内新闻</div>
+
+            <div class="news-item">
+                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/07-06/10653293.shtml" target="_blank">天问二号探测器抵达目标小行星 开展科学探测</a>
+                <span class="news-source">中新网</span>
+                <div class="news-desc">中国深空探测天问二号探测器成功抵达目标小行星，正式开始科学探测任务，标志着中国小行星探测取得重大突破。</div>
+            </div>
+
+            <div class="news-item">
+                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/07-06/10653533.shtml" target="_blank">中俄"海上联合-2026"联合演习在山东青岛开幕</a>
+                <span class="news-source">中新网</span>
+                <div class="news-desc">中俄两国海军"海上联合-2026"联合军事演习在山东青岛正式开幕，双方将开展多项联合演练。</div>
+            </div>
+
+            <div class="news-item">
+                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/07-06/10653561.shtml" target="_blank">中国海军成功组织潜射战略导弹试射</a>
+                <span class="news-source">中新网</span>
+                <div class="news-desc">中国海军成功组织潜射战略导弹试射，展示了中国海军的战略威慑能力和国防实力。</div>
+            </div>
+
+            <div class="news-item">
+                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/07-06/10653771.shtml" target="_blank">发射升空画面公布！中国海军成功组织潜射战略导弹试射</a>
+                <span class="news-source">中新网</span>
+                <div class="news-desc">官方公布了潜射战略导弹发射升空的完整画面，展示了导弹从水下发射到升空的全过程。</div>
+            </div>
+
+            <div class="news-item">
+                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/07-06/10653594.shtml" target="_blank">习近平同黑山总统米拉托维奇就中国同黑山建交20周年互致贺电</a>
+                <span class="news-source">中新网</span>
+                <div class="news-desc">国家主席习近平同黑山总统米拉托维奇就中国同黑山建交20周年互致贺电，强调深化双边关系。</div>
+            </div>
+
+            <div class="news-item">
+                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/07-06/10653608.shtml" target="_blank">外交部：习近平主席已向美国总统特朗普致电祝贺美国独立250周年</a>
+                <span class="news-source">中新网</span>
+                <div class="news-desc">外交部宣布，习近平主席已向美国总统特朗普致电祝贺美国独立250周年，体现中美关系积极态势。</div>
+            </div>
+
+            <div class="news-item">
+                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/07-06/10653615.shtml" target="_blank">中方：潜射战略导弹试射是例行性安排，望有关国家不要过度解读</a>
+                <span class="news-source">中新网</span>
+                <div class="news-desc">中方回应潜射战略导弹试射，强调这是例行性军事安排，希望有关国家不要过度解读。</div>
+            </div>
+
+            <div class="news-item">
+                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/07-06/10653724.shtml" target="_blank">中央网信办深入开展"清朗·整治AI应用乱象"专项行动第一阶段工作</a>
+                <span class="news-source">中新网</span>
+                <div class="news-desc">中央网信办部署开展"清朗·整治AI应用乱象"专项行动，第一阶段工作已取得积极成效。</div>
+            </div>
+
+            <div class="news-item">
+                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/07-06/10653764.shtml" target="_blank">国家防总针对广西启动防汛二级应急响应</a>
+                <span class="news-source">中新网</span>
+                <div class="news-desc">受台风"美莎克"影响，国家防总针对广西启动防汛二级应急响应，全力做好防汛救灾工作。</div>
+            </div>
+
+            <div class="news-item">
+                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/07-06/10653861.shtml" target="_blank">三部门向广西调拨15万件中央救灾物资</a>
+                <span class="news-source">中新网</span>
+                <div class="news-desc">应急管理部、财政部、国家粮食和物资储备局紧急向广西调拨15万件中央救灾物资，支援抗洪抢险。</div>
+            </div>
+
+            <div class="news-item">
+                <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/07-06/10653819.shtml" target="_blank">习近平致电祝贺藤森庆子当选秘鲁总统</a>
+                <span class="news-source">中新网</span>
+                <div class="news-desc">国家主席习近平致电祝贺藤森庆子当选秘鲁总统，表示愿推动中秘全面战略伙伴关系深入发展。</div>
+            </div>
+
+            <div class="news-item">
+                <a class="news-link" href="https://www.chinanews.com.cn/sh/2026/07-06/10653583.shtml" target="_blank">台风"美莎克"肆虐 广西多个水库现险情</a>
+                <span class="news-source">中新网</span>
+                <div class="news-desc">台风"美莎克"过境广西，造成多个水库出现险情，当地紧急组织抢险救援和群众转移工作。</div>
+            </div>
+
+            <div class="news-item">
+                <a class="news-link" href="https://www.chinanews.com.cn/sh/2026/07-06/10653588.shtml" target="_blank">台风"美莎克"减弱为热带低压，其环流将继续影响我国多地</a>
+                <span class="news-source">中新网</span>
+                <div class="news-desc">台风"美莎克"已减弱为热带低压，但其残余环流将继续影响华南、江南等地，带来强降雨。</div>
+            </div>
+
+            <div class="news-category">🌍 国际新闻</div>
+
+            <div class="news-item">
+                <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/07-06/10653518.shtml" target="_blank">乌方称首都基辅遭袭已致11死 俄方确认袭击</a>
+                <span class="news-source">中新网</span>
+                <div class="news-desc">乌克兰方面称首都基辅遭袭已致11人死亡，俄罗斯方面确认实施了打击行动，俄乌冲突持续升级。</div>
+            </div>
+
+            <div class="news-item">
+                <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/07-06/10653589.shtml" target="_blank">菲参议院启动对副总统莎拉·杜特尔特的弹劾审判</a>
+                <span class="news-source">中新网</span>
+                <div class="news-desc">菲律宾参议院正式启动对副总统莎拉·杜特尔特的弹劾审判程序，引发国内外广泛关注。</div>
+            </div>
+
+            <div class="news-item">
+                <a class="news-link" href="https://www.chinanews.com.cn/ty/2026/07-06/10653838.shtml" target="_blank">（美加墨世界杯）内马尔：最后一支桑巴，未能起舞</a>
+                <span class="news-source">中新网</span>
+                <div class="news-desc">美加墨世界杯赛场上，巴西球星内马尔遗憾告别，称这是他最后一届世界杯，桑巴军团未能走得更远。</div>
+            </div>
+
+            <div class="news-item">
+                <a class="news-link" href="https://www.chinanews.com.cn/ty/2026/07-06/10653467.shtml" target="_blank">世界杯八强已落位四席 挪威将对阵英格兰</a>
+                <span class="news-source">中新网</span>
+                <div class="news-desc">美加墨世界杯八强已产生四个席位，挪威队将对阵英格兰队，争夺半决赛入场券。</div>
+            </div>
+
+            <div class="news-item">
+                <a class="news-link" href="https://www.chinanews.com.cn/tp/2026/07-06/10653306.shtml" target="_blank">中国民乐奏响俄罗斯"民族友谊"艺术节</a>
+                <span class="news-source">中新网</span>
+                <div class="news-desc">中国民族音乐代表团在俄罗斯"民族友谊"艺术节上精彩演出，促进中俄文化交流与民心相通。</div>
+            </div>
+        </div>
+
+        <!-- ===== 📝 英文金句 ===== -->
+        <div class="section">
+            <div class="section-title">📝 英文金句</div>
+            <div class="quote-box">
+                <div class="quote-en">"The only way to do great work is to love what you do."</div>
+                <div class="quote-cn">「做出伟大工作的唯一途径，就是热爱你所做的事情。」</div>
+                <div class="quote-author">—— 史蒂夫·乔布斯 Steve Jobs</div>
+            </div>
+        </div>
+
+        <!-- ===== 💬 神回复 ===== -->
+        <div class="section">
+            <div class="section-title">💬 神回复</div>
+            <div class="joke-item">问："如何用一句话形容穷？"<br>答："打开外卖App，先看配送费再看满减，最后默默关掉。"</div>
+            <div class="joke-item">问："你听过最扎心的一句话是什么？"<br>答："您已偏航，正在重新规划路线。"</div>
+            <div class="joke-item">问："成年人最大的奢侈是什么？"<br>答："周末一觉睡到自然醒，中间没人打扰。"</div>
+            <div class="joke-item">问："为什么气象预报总是不准？"<br>答："天气预报说今天有雨，于是你带了伞，然后没下雨——天气预报其实是准的，因为雨被你'拒收'了。"</div>
+        </div>
+
+        <!-- ===== 📚 成语典故 ===== -->
+        <div class="section">
+            <div class="section-title">📚 成语典故</div>
+            <div class="idiom-box">
+                <div class="idiom-title">🎯 画龙点睛</div>
+                <div class="idiom-source">出处：唐·张彦远《历代名画记·张僧繇》</div>
+                <div class="idiom-story">
+                    南北朝时期，梁朝有一位著名的画家叫张僧繇，他在金陵安乐寺的墙壁上画了四条龙，但都没有画眼睛。人们觉得很奇怪，问他为什么不画眼睛。张僧繇说："画上眼睛，龙就会飞走。"大家都不相信，一定要他试试。于是张僧繇给其中两条龙点上了眼睛。顿时，电闪雷鸣，那两条龙腾空而起，飞上了天空。而没有点眼睛的两条龙，仍然留在墙壁上。
+                </div>
+                <div class="idiom-meaning">
+                    💡 <strong>释义：</strong>原形容梁代画家张僧繇作画的神妙。后多比喻写文章或讲话时，在关键处用几句话点明实质，使内容更加生动有力。
                 </div>
             </div>
         </div>
 
+        <!-- ===== 💰 API状态 ===== -->
         <div class="section">
-            <h2 class="section-title">📰 最新要闻</h2>
-            <div class="news-card domestic">
-                <h3>🇨🇳 国内要闻</h3>
-                <ul class="news-list">
-                    <li>
-                        <span class="news-index">1</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/07-05/10653001.shtml" target="_blank">甲板已划线、阻拦索已安装！四川舰最新进展</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="news-index">2</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/07-05/10652969.shtml" target="_blank">中俄将举行“海上联合-2026”联合演习和海上联合巡航</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="news-index">3</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/07-05/10652919.shtml" target="_blank">外包运维人员下载核心数据提供给间谍被抓 国安部门披露</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="news-index">4</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/07-05/10653133.shtml" target="_blank">再添铁证！重要证据揭示侵华日军实施化学战</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="news-index">5</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/sh/2026/07-05/10653120.shtml" target="_blank">三部门调拨1.5万件中央救灾物资至广西、辽宁等地</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="news-index">6</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/cj/2026/07-05/10653080.shtml" target="_blank">这些中国制造“避暑神器”，正在为欧洲降温！</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="news-index">7</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/07-05/10652912.shtml" target="_blank">3部门发文规范国际科技组织成立登记</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="news-index">8</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/cj/2026/07-05/10652928.shtml" target="_blank">国内航线燃油附加费今起下调 最高每航段降50元</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="news-index">9</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/cj/2026/07-05/10653150.shtml" target="_blank">上海乐高乐园开园首年接待游客超200万人次</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="news-index">10</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/cj/2026/07-05/10652944.shtml" target="_blank">6月份中国物流业景气指数升至50.6% 各区域均衡增长</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="news-index">11</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/ty/2026/07-05/10652915.shtml" target="_blank">世界杯丨姆巴佩进球创纪录，法国摩洛哥将上演强强对话</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="news-index">12</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/gn/2026/07-05/10653046.shtml" target="_blank">中外军官解码长征，读懂这部英雄史诗的不朽力量</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
-            <div class="news-card international">
-                <h3>🌍 国际要闻</h3>
-                <ul class="news-list">
-                    <li>
-                        <span class="news-index">1</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/07-05/10653045.shtml" target="_blank">一架小小的无人机，何以变成“以军地面部队的噩梦”？</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="news-index">2</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/07-05/10652930.shtml" target="_blank">委内瑞拉地震死亡人数升至2954人</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="news-index">3</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/07-04/10652579.shtml" target="_blank">普京：俄军全面控制卢甘斯克地区及康斯坦丁诺夫卡重镇</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="news-index">4</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/07-04/10652646.shtml" target="_blank">日媒：高市早苗访印拒喝印度水，“漱口也不行”</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="news-index">5</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/07-02/10651190.shtml" target="_blank">两人爬上纽约帝国大厦顶端疑似求婚 后被警方拘留</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="news-index">6</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/07-04/10652625.shtml" target="_blank">中墨轨道交通“绿色未来对话”活动在墨西哥城举办</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="news-index">7</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/07-03/10652364.shtml" target="_blank">英国服务业活动收缩态势加剧</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="news-index">8</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/07-03/10652205.shtml" target="_blank">美国一邮轮暴发诺如病毒疫情 125人感染</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="news-index">9</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/cj/2026/07-05/10653177.shtml" target="_blank">“兄妹外交”表象下，日印合作暗藏各自算计</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="news-index">10</span>
-                        <div class="news-content">
-                            <a class="news-link" href="https://www.chinanews.com.cn/gj/2026/02-15/10572973.shtml" target="_blank">警惕高市胜选后危险动作，日本应反思历史修复与中国关系</a>
-                            <span class="news-source">中新网</span>
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">📝 英文金句</h2>
-            <div class="feature-card">
-                <div class="en-quote">“The only way to do great work is to love what you do.”</div>
-                <div class="zh-quote">“成就伟大事业的唯一途径，就是热爱你所做的事情。”</div>
-                <div class="quote-source">—— Steve Jobs, Stanford Commencement Speech (2005)</div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">🎬 经典台词</h2>
-                <div class="joke-item">「要么忙着活，要么忙着死。」
-                    <div style="text-align:right;font-size:13px;color:#888;margin-top:4px;">——《肖申克的救赎》（1994）</div>
+            <div class="section-title">💰 API状态</div>
+            <div class="api-status">
+                <div class="api-card deepseek">
+                    <div class="name">DeepSeek API</div>
+                    <div class="balance">¥14.61</div>
+                    <div class="status">✅ 余额充足 · 正常运行</div>
                 </div>
-                <div class="joke-item">「我们当中有些人，注定不会成为普通人。」
-                    <div style="text-align:right;font-size:13px;color:#888;margin-top:4px;">——《心灵捕手》（1997）</div>
-                </div>
-                <div class="joke-item">「星星在哪里都很亮，就看你有没有抬头去看它们。」
-                    <div style="text-align:right;font-size:13px;color:#888;margin-top:4px;">——《玻璃樽》（1999）</div>
-                </div>
-                <div class="joke-item">「岁月极美，在于它必然的流逝。春花、秋月、夏日、冬雪。」
-                    <div style="text-align:right;font-size:13px;color:#888;margin-top:4px;">——《芳华》引三毛语</div>
-                </div>
-
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">📚 成语典故</h2>
-            <div class="idiom-title">卧薪尝胆</div>
-            <div class="idiom-source">《史记·越王勾践世家》</div>
-            <div class="idiom-story">春秋时期，越王勾践被吴王夫差打败后，卧薪尝胆，时刻不忘复仇。他每天睡在柴草上，饭前先尝苦胆，以此激励自己。经过十年的艰苦奋斗，勾践终于灭掉吴国，成为春秋时期最后一位霸主。</div>
-            <div class="idiom-meaning">形容人刻苦自励，发奋图强，最终取得成功。</div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">💰 API状态</h2>
-            <div class="api-grid">
-                <div class="api-card">
-                    <div class="api-name">DeepSeek API</div>
-                    <div class="api-value">14.61元</div>
-                    <div class="api-status status-ok">✅ 正常</div>
-                </div>
-                <div class="api-card">
-                    <div class="api-name">智谱 CogView</div>
-                    <div class="api-value">免费</div>
-                    <div class="api-status status-ok">✅ 可用</div>
+                <div class="api-card zhipu">
+                    <div class="name">智谱 AI (CogView)</div>
+                    <div class="balance">免费</div>
+                    <div class="status">✅ CogView-3-Flash 可用</div>
                 </div>
             </div>
         </div>
 
+        <!-- ===== 🌤️ 预报图集 ===== -->
         <div class="section">
-            <h2 class="section-title">🌤️ 预报图集</h2>
-            <div class="gallery-subtitle">ECMWF 欧洲中期天气预报中心</div>
-            <div class="image-gallery">
-                    <div class="weather-card">
-                        <img src="images/ecmwf_500hpa_f000.jpg" alt="ECMWF 500hPa f000" loading="lazy">
-                        <div class="weather-label">ECMWF 500hPa f000</div>
+            <div class="section-title">🌤️ 预报图集</div>
+
+            <div class="gallery-section">
+                <div class="gallery-title">🟦 ECMWF 欧洲中心预报</div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/ecmwf_500hpa_f000.jpg" alt="ECMWF 500hPa 分析场" loading="lazy">
+                        <div class="caption">500hPa 分析场</div>
                     </div>
-                    <div class="weather-card">
-                        <img src="images/ecmwf_500hpa_f006.jpg" alt="ECMWF 500hPa f006" loading="lazy">
-                        <div class="weather-label">ECMWF 500hPa f006</div>
+                    <div class="gallery-item">
+                        <img src="images/ecmwf_500hpa_f006.jpg" alt="ECMWF 500hPa 6h预报" loading="lazy">
+                        <div class="caption">500hPa 6h预报</div>
                     </div>
-                    <div class="weather-card">
-                        <img src="images/ecmwf_500hpa_f012.jpg" alt="ECMWF 500hPa f012" loading="lazy">
-                        <div class="weather-label">ECMWF 500hPa f012</div>
+                    <div class="gallery-item">
+                        <img src="images/ecmwf_500hpa_f012.jpg" alt="ECMWF 500hPa 12h预报" loading="lazy">
+                        <div class="caption">500hPa 12h预报</div>
                     </div>
-                    <div class="weather-card">
-                        <img src="images/ecmwf_500hpa_f018.jpg" alt="ECMWF 500hPa f018" loading="lazy">
-                        <div class="weather-label">ECMWF 500hPa f018</div>
+                    <div class="gallery-item">
+                        <img src="images/ecmwf_500hpa_f018.jpg" alt="ECMWF 500hPa 18h预报" loading="lazy">
+                        <div class="caption">500hPa 18h预报</div>
                     </div>
-                    <div class="weather-card">
-                        <img src="images/ecmwf_500hpa_f024.jpg" alt="ECMWF 500hPa f024" loading="lazy">
-                        <div class="weather-label">ECMWF 500hPa f024</div>
+                    <div class="gallery-item">
+                        <img src="images/ecmwf_500hpa_f024.jpg" alt="ECMWF 500hPa 24h预报" loading="lazy">
+                        <div class="caption">500hPa 24h预报</div>
                     </div>
-                    <div class="weather-card">
+                    <div class="gallery-item">
                         <img src="images/ecmwf_qinghai_precip_24h.jpg" alt="ECMWF 青海24h降水" loading="lazy">
-                        <div class="weather-label">ECMWF 青海24h降水</div>
+                        <div class="caption">青海省24h累计降水</div>
                     </div>
-
+                </div>
             </div>
-            <div class="gallery-subtitle">GFS 美国全球预报系统</div>
-            <div class="image-gallery">
-                    <div class="weather-card">
-                        <img src="images/gfs_500hpa_f000.jpg" alt="GFS 500hPa f000" loading="lazy">
-                        <div class="weather-label">GFS 500hPa f000</div>
-                    </div>
-                    <div class="weather-card">
-                        <img src="images/gfs_500hpa_f006.jpg" alt="GFS 500hPa f006" loading="lazy">
-                        <div class="weather-label">GFS 500hPa f006</div>
-                    </div>
-                    <div class="weather-card">
-                        <img src="images/gfs_500hpa_f012.jpg" alt="GFS 500hPa f012" loading="lazy">
-                        <div class="weather-label">GFS 500hPa f012</div>
-                    </div>
-                    <div class="weather-card">
-                        <img src="images/gfs_500hpa_f018.jpg" alt="GFS 500hPa f018" loading="lazy">
-                        <div class="weather-label">GFS 500hPa f018</div>
-                    </div>
-                    <div class="weather-card">
-                        <img src="images/gfs_500hpa_f024.jpg" alt="GFS 500hPa f024" loading="lazy">
-                        <div class="weather-label">GFS 500hPa f024</div>
-                    </div>
-                    <div class="weather-card">
-                        <img src="images/gfs_qinghai_precip_24h.jpg" alt="GFS 青海24h降水" loading="lazy">
-                        <div class="weather-label">GFS 青海24h降水</div>
-                    </div>
 
+            <div class="gallery-section">
+                <div class="gallery-title">🟥 GFS 美国全球预报系统</div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/gfs_500hpa_f000.jpg" alt="GFS 500hPa 分析场" loading="lazy">
+                        <div class="caption">500hPa 分析场</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/gfs_500hpa_f006.jpg" alt="GFS 500hPa 6h预报" loading="lazy">
+                        <div class="caption">500hPa 6h预报</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/gfs_500hpa_f012.jpg" alt="GFS 500hPa 12h预报" loading="lazy">
+                        <div class="caption">500hPa 12h预报</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/gfs_500hpa_f018.jpg" alt="GFS 500hPa 18h预报" loading="lazy">
+                        <div class="caption">500hPa 18h预报</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/gfs_500hpa_f024.jpg" alt="GFS 500hPa 24h预报" loading="lazy">
+                        <div class="caption">500hPa 24h预报</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/gfs_qinghai_precip_24h.jpg" alt="GFS 青海24h降水" loading="lazy">
+                        <div class="caption">青海省24h累计降水</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
     <div class="footer">
-        <p>数据来源：中国新闻网 · 天气在线 · ECMWF · GFS</p>
-        <p>© 2026 每日晨报 · 自动生成</p>
+        <p>🌤️ Hermes 气象日报 · AI 自动生成</p>
+        <p>数据来源：中国天气网 · 中国新闻网 · ECMWF · GFS/NCEP</p>
+        <p>生成时间：2026-07-07 06:10 CST</p>
     </div>
 </body>
 </html>
